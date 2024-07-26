@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap");
 
 /*
-! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -694,8 +694,8 @@ video {
 }
 
 .from-white{
-  --tw-gradient-from: #D3D5FD var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(211 213 253 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: #ffffff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -706,8 +706,8 @@ video {
 }
 
 .via-white{
-  --tw-gradient-to: rgb(211 213 253 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #D3D5FD var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #ffffff var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .p-24{
@@ -817,8 +817,8 @@ video {
 
 .before\:from-white::before{
   content: var(--tw-content);
-  --tw-gradient-from: #D3D5FD var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(211 213 253 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: #ffffff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -1095,8 +1095,13 @@ video {
 }
 
 /*
-font-family: 'Josefin Sans', sans-serif;
-font-family: 'Roboto Mono', monospace;
+Larsseit >>
+font-family: "Albert Sans", sans-serif;
+
+Noe Display >> bold
+font-family: "Libre Caslon Text", serif;
+
+
 */
 
 body{
@@ -1104,25 +1109,6 @@ body{
   background-color: rgb(11 11 13 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(239 246 255 / var(--tw-text-opacity));
-  & > * > :not(pre) {
-    font-family: "Josefin Sans", sans-serif;
-  }
-  & > * > :not(pre){
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-  }
-  & > * > :not(pre){
-    transition-duration: 150ms;
-  }
-  a{
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-  }
-  a{
-    transition-duration: 150ms;
-  }
 }
 
 .app{

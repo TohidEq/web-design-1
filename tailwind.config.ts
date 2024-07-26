@@ -9,9 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        white: "#D3D5FD",
+        white: "#ffffff",
         light: "#929AAB",
         dark: "#474A56",
+        "blue-light": "#00C9E0",
+        "green-light": "#41EAD4",
+
+        "blue-dark": "#011627",
         black: "#0B0B0D",
       },
       backgroundImage: {
