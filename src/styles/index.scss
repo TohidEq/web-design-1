@@ -556,10 +556,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.h-screen{
-  height: 100vh;
-}
-
 .h-\[200vh\]{
   height: 200vh;
 }
@@ -666,5 +662,64 @@ background: linear-gradient(
 
 .navbar{
   position: fixed;
-  background-color: transparent;
+  width: 100%;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  &.not-scrolled{
+    height: 13rem;
+  }
+  &.not-scrolled{
+    background-color: transparent;
+  }
+  &.scrolled{
+    height: 7rem;
+  }
+  &.scrolled{
+    background-image: linear-gradient(0deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%);
+  }
+  .nav-container{
+    width: 100%;
+  }
+  @media (min-width: 640px){
+    .nav-container{
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 768px){
+    .nav-container{
+      max-width: 768px;
+    }
+  }
+  @media (min-width: 1024px){
+    .nav-container{
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 1280px){
+    .nav-container{
+      max-width: 1280px;
+    }
+  }
+  @media (min-width: 1536px){
+    .nav-container{
+      max-width: 1536px;
+    }
+  }
+  .nav-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav-container{
+    display: flex;
+  }
+  .nav-container{
+    height: 100%;
+  }
+  .nav-container{
+    align-items: center;
+  }
+  .nav-container{
+    justify-content: space-between;
+  }
 }

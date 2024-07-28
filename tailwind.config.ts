@@ -19,6 +19,10 @@ const config: Config = {
         black: "#0B0B0D",
       },
       backgroundImage: {
+        "gradient-dark-bottom":
+          "linear-gradient(180deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%)",
+        "gradient-dark-top":
+          "linear-gradient(0deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",

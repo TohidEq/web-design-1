@@ -1,3 +1,15 @@
 .navbar {
-  @apply fixed bg-transparent;
+  @apply fixed w-full  transition-all duration-200;
+
+  &.not-scrolled {
+    @apply h-52 bg-transparent;
+  }
+
+  &.scrolled {
+    @apply h-28 bg-gradient-dark-top;
+  }
+
+  .nav-container {
+    @apply container mx-auto flex justify-between h-full items-center;
+  }
 }
