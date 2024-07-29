@@ -1,0 +1,7 @@
+.welcome {
+  @apply bg-welcome bg-cover bg-fixed bg-center h-screen;
+
+  .welcome-container {
+    @apply container mx-auto;
+  }
+}

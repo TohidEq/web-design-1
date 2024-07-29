@@ -23,9 +23,13 @@ const config: Config = {
           "linear-gradient(180deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%)",
         "gradient-dark-top":
           "linear-gradient(0deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%)",
+        "gradient-dark-top-light":
+          "linear-gradient(0deg, rgba(255 255 255 / 0) 0%, #01162793 76.64%, #011627fB 100%)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+
+        welcome: "url('/images/welcome-background.jpg')",
       },
       dropShadow: {
         glow: ["0px 0px 8px #D3D5FD"],
@@ -33,6 +37,10 @@ const config: Config = {
         "glow-link-1": ["0px 0px 9px #D3D5FD"],
         "glow-link-2": ["0px 0px 9px #D3D5FD", "0px 0px 9px #D3D5FD"],
         "glow-link-3": ["0px 0px 8px #D3D5FD", "0px 0px 8px #D3D5FD"],
+      },
+      fontFamily: {
+        "libre-caslon": ["Libre Caslon Text", "serif"],
+        "albert-sans": ["Albert Sans", "sans-serif"],
       },
     },
   },

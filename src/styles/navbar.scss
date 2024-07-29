@@ -1,15 +1,60 @@
 .navbar {
-  @apply fixed w-full  transition-all duration-200;
+  @apply fixed w-full  transition-all duration-200 z-30 text-white;
 
   &.not-scrolled {
     @apply h-52 bg-transparent;
   }
 
   &.scrolled {
-    @apply h-28 bg-gradient-dark-top;
+    @apply h-28 bg-gradient-dark-top-light;
   }
 
   .nav-container {
-    @apply container mx-auto flex justify-between h-full items-center;
+    @apply container mx-auto px-5 flex justify-between h-full items-center font-albert-sans;
+
+    .nav-logo {
+      @apply font-libre-caslon font-semibold text-4xl;
+
+      span {
+        @apply text-green-light;
+      }
+    }
+
+    .nav-search {
+      @apply w-full grid pr-5;
+      form {
+        @apply w-fit justify-self-end;
+      }
+      button {
+        @apply w-6 h-6;
+
+        svg {
+          @apply w-full h-full;
+        }
+      }
+
+      input {
+        @apply hidden;
+      }
+    }
+
+    .nav-links {
+      & button,
+      a {
+        @apply uppercase;
+      }
+
+      .nav-links-item {
+        @apply bg-blue-light transition-all duration-150 text-base font-bold py-4 px-14 rounded-full relative;
+
+        &:hover {
+          @apply bg-blue-light/60;
+        }
+        &:after {
+          @apply content-[""] bg-white 
+            absolute w-[30px] h-[2px]  top-1/2 -translate-y-1/2 right-0 translate-x-1/2;
+        }
+      }
+    }
   }
 }

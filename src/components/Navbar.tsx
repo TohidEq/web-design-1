@@ -44,7 +44,9 @@ function Navbar({}: Props) {
         </div>
 
         <div className="nav-links">
-          <button onClick={toggleMenu}>menu</button>
+          <button className="nav-links-item" onClick={toggleMenu}>
+            menu
+          </button>
         </div>
       </div>
     </div>
