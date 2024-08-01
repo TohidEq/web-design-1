@@ -26,6 +26,8 @@ const config: Config = {
         "gradient-dark-top-light":
           "linear-gradient(0deg, rgba(255 255 255 / 0) 0%, #01162793 76.64%, #011627fB 100%)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-white-top":
+          "linear-gradient(180deg, rgba(255 255 255 / 0) 0%, #ffffff 76.64%, #ffffff 100%)",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 

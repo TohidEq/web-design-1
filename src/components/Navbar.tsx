@@ -15,17 +15,20 @@ function Navbar({}: Props) {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
-
+    
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  
   const toggleSearch = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {};
-
-  const toggleMenu = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {};
+  
+  const [toggleMenu,setToggleMenu ] = useState(false);
+  const toggleMenuHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    setToggleMenu(!toggleMenu);
+  };
 
   return (
     <div className={`navbar  ${darkModeNavbar ? "scrolled" : "not-scrolled"}`}>
@@ -44,9 +47,25 @@ function Navbar({}: Props) {
         </div>
 
         <div className="nav-links">
-          <button className="nav-links-item" onClick={toggleMenu}>
+          <button className="nav-links-item" onClick={toggleMenuHandler}>
             menu
           </button>
+            <div className={`nav-menu ${toggleMenu? "show":"hide"}`}>
+              <ul  className="nav-menu-items">
+                <li className="nav-menu-item">
+                  <Link href={""}>Welcome</Link>
+                </li>
+                <li className="nav-menu-item">
+                  <Link href={""}>about us</Link>
+                </li>
+                <li className="nav-menu-item">
+                  <Link href={""}>contact us</Link>
+                </li>
+                <li className="nav-menu-item">
+                  <Link href={""}>bye bye</Link>
+                </li>
+              </ul>
+            </div>
         </div>
       </div>
     </div>

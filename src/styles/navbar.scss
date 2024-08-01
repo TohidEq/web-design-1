@@ -39,13 +39,15 @@
     }
 
     .nav-links {
+      @apply relative;
+
       & button,
       a {
         @apply uppercase;
       }
 
       .nav-links-item {
-        @apply bg-blue-light transition-all duration-150 text-base font-bold py-4 px-14 rounded-full relative;
+        @apply bg-blue-light transition-all duration-150  text-base font-bold py-4 w-40 text-center rounded-full relative;
 
         &:hover {
           @apply bg-blue-light/60;
@@ -53,6 +55,40 @@
         &:after {
           @apply content-[""] bg-white 
             absolute w-[30px] h-[2px]  top-1/2 -translate-y-1/2 right-0 translate-x-1/2;
+        }
+      }
+      .nav-menu{
+        @apply absolute right-0 top-full  transition-all duration-150 overflow-y-hidden translate-x-4;
+        &.show{
+          @apply opacity-100 ;
+
+        }
+        
+        &.hide{
+          @apply -z-50 opacity-0 ;
+
+          .nav-menu-items{
+            @apply -top-40;
+          }
+        }
+
+        & *{
+          @apply transition-all duration-150;
+        }
+        .nav-menu-items{
+          @apply relative top-0 w-44;
+          .nav-menu-item a{
+            @extend .nav-links-item;
+            @apply mt-2 w-40 block relative;
+            
+            &:before{
+              @apply content-[""] bg-gradient-white-top
+              absolute h-[30px] w-[2px]  
+              top-1/2  -right-[15px]  -translate-y-full;
+              
+            }
+            
+          }
         }
       }
     }
