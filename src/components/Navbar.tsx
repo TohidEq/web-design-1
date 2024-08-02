@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { FiSearch } from "react-icons/fi";
 import { useState, useEffect } from "react";
+import { FaChevronDown,FaChevronUp } from "react-icons/fa";
 
 type Props = {};
 
@@ -20,10 +21,28 @@ function Navbar({}: Props) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
-  const toggleSearch = (
+
+  const [windowSize, setWindowSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setWindowSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+
+  const [toggleSearch,setToggleSearch ] = useState(false);
+  const toggleSearchHandler = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {};
+  ) => {
+    if(!toggleSearch){
+      const searchInput = document.getElementById("search-input") as HTMLInputElement;
+      searchInput.focus();
+      searchInput.select();
+    }
+    setToggleSearch(!toggleSearch);
+  };
   
   const [toggleMenu,setToggleMenu ] = useState(false);
   const toggleMenuHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -37,21 +56,24 @@ function Navbar({}: Props) {
           NT<span>.</span>
         </Link>
 
-        <div className="nav-search">
-          <form action="" autoComplete="off">
-            <button onClick={toggleSearch}>
-              <FiSearch />
+        <div className={`nav-search ${toggleSearch? "show":"hide"}`}>
+          <div className="nav-search-container">
+
+            <button onClick={toggleSearchHandler}>
+              <FiSearch className={!toggleSearch?"scale-x-0-100":"-scale-x-100"} />
             </button>
-            <input type="text" name="q" id="search-input" autoComplete="off" />
+          <form action="" autoComplete="off">
+            <input required type="text" name="q" id="search-input" autoComplete="off" />
           </form>
+          </div>
         </div>
 
         <div className="nav-links">
-          <button className="nav-links-item" onClick={toggleMenuHandler}>
-            menu
+          <button className="nav-links-item nav-menu-btn" onClick={toggleMenuHandler}>
+            {windowSize[0]>=768? "menu":
+            toggleMenu?<FaChevronUp />:<FaChevronDown />}
           </button>
-            <div className={`nav-menu ${toggleMenu? "show":"hide"}`}>
-              <ul  className="nav-menu-items">
+              <ul  className={`nav-menu-items ${toggleMenu? "show":"hide"}`}>
                 <li className="nav-menu-item">
                   <Link href={""}>Welcome</Link>
                 </li>
@@ -65,7 +87,6 @@ function Navbar({}: Props) {
                   <Link href={""}>bye bye</Link>
                 </li>
               </ul>
-            </div>
         </div>
       </div>
     </div>

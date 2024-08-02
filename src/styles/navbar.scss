@@ -2,18 +2,20 @@
   @apply fixed w-full  transition-all duration-200 z-30 text-white;
 
   &.not-scrolled {
-    @apply h-52 bg-transparent;
+    @apply  bg-transparent
+    h-28 md:h-52;
   }
 
   &.scrolled {
-    @apply h-28 bg-gradient-dark-top-light;
+    @apply  bg-gradient-dark-top-light
+    h-20 md:h-28;
   }
 
   .nav-container {
     @apply container mx-auto px-5 flex justify-between h-full items-center font-albert-sans;
 
     .nav-logo {
-      @apply font-libre-caslon font-semibold text-4xl;
+      @apply font-libre-caslon font-semibold text-base sm:text-lg md:text-4xl;
 
       span {
         @apply text-green-light;
@@ -21,20 +23,48 @@
     }
 
     .nav-search {
-      @apply w-full grid pr-5;
-      form {
-        @apply w-fit justify-self-end;
-      }
-      button {
-        @apply w-6 h-6;
+      @apply w-full grid 
+      pr-1.5 md:pr-5;
 
-        svg {
-          @apply w-full h-full;
+      
+
+      .nav-search-container{
+        @apply flex items-center justify-self-end  rounded-3xl transition-colors duration-150 bg-transparent 
+        px-2 md:px-3;
+
+        
+        form {
+
+          input{
+            @apply bg-transparent    transition-all duration-150 text-white
+            max-w-[100px] md:max-w-[200px] 
+            py-0.5 md:py-2;
+
+          }
+        }
+        button {
+          @apply 
+          w-4 h-4 md:w-6 md:h-6;
+
+          svg {
+            @apply w-full h-full;
+          }
         }
       }
 
-      input {
-        @apply hidden;
+      &.show{
+        .nav-search-container{
+          @apply bg-light/20;
+        }
+        input {
+          @apply w-[999px] px-2 visible;
+        }
+      }
+      &.hide{
+
+        input {
+          @apply w-0;
+        }
       }
     }
 
@@ -46,50 +76,65 @@
         @apply uppercase;
       }
 
+      .nav-menu-btn{
+        @apply w-8 md:w-40;
+        svg{
+          @apply mx-auto w-3.5 h-3.5; 
+        }
+      }
+
       .nav-links-item {
-        @apply bg-blue-light transition-all duration-150  text-base font-bold py-4 w-40 text-center rounded-full relative;
+        @apply bg-blue-light transition-all duration-150 font-bold 
+        text-center rounded-full relative
+        text-xs sm:text-sm md:text-base
+        py-2 md:py-4;  
 
         &:hover {
           @apply bg-blue-light/60;
         }
         &:after {
           @apply content-[""] bg-white 
-            absolute w-[30px] h-[2px]  top-1/2 -translate-y-1/2 right-0 translate-x-1/2;
+            absolute  
+            rounded-2xl
+            w-[10px] md:w-[30px] 
+            h-[2px]  
+            top-1/2 -translate-y-1/2 
+            right-0 translate-x-1/2;
         }
       }
-      .nav-menu{
-        @apply absolute right-0 top-full  transition-all duration-150 overflow-y-hidden translate-x-4;
+      .nav-menu-items{
+        @apply absolute right-0 top-full  transition-all duration-150 ;
+
+        .nav-menu-item a{
+          @extend .nav-links-item;
+          @apply mt-2 
+          w-32 md:w-40
+          block relative;
+          
+          &:before{
+            @apply content-[""] bg-gradient-white-top
+            absolute h-[15px] md:h-[30px] w-[2px]  
+            top-1/2  -right-[5px] md:-right-[15px]  -translate-y-full
+            invisible  sm:visible ;
+            
+          }
+          
+        }
+
         &.show{
-          @apply opacity-100 ;
+          @apply opacity-100 visible;
 
         }
         
         &.hide{
-          @apply -z-50 opacity-0 ;
+          @apply -z-50 opacity-0 invisible ;
 
-          .nav-menu-items{
-            @apply -top-40;
-          }
         }
 
-        & *{
+        &, & *{
           @apply transition-all duration-150;
         }
-        .nav-menu-items{
-          @apply relative top-0 w-44;
-          .nav-menu-item a{
-            @extend .nav-links-item;
-            @apply mt-2 w-40 block relative;
-            
-            &:before{
-              @apply content-[""] bg-gradient-white-top
-              absolute h-[30px] w-[2px]  
-              top-1/2  -right-[15px]  -translate-y-full;
-              
-            }
-            
-          }
-        }
+        
       }
     }
   }

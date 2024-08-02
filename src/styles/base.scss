@@ -21,6 +21,15 @@ body {
   container mx-auto   px-2
   sm:px-0;
 }
+
+*{
+  @apply outline-none ; 
+  &::selection{
+    @apply bg-blue-light/70 text-black/95; 
+    
+  }
+}
+
 /* Gradient transition */
 
 /*
