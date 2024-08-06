@@ -1,35 +1,23 @@
 .welcome {
-  @apply bg-welcome bg-cover bg-fixed bg-center h-screen text-white;
-  &::before{
-    @apply content-[""] absolute w-full  bg-gradient-dark-bottom
-    left-0 bottom-0 -z-0
-    h-1/4 md:h-1/3;
-  }
-
-
-
-
-  
+  @apply bg-welcome bg-cover bg-fixed bg-center h-screen text-white grid content-between;
 
   .welcome-container {
-    @apply container mx-auto relative h-full ;
+    @apply container mx-auto relative mt-[20vh];
 
-
-    .welcome-content{
-      @apply max-w-[643px] text-center mx-auto w-full  grid place-content-center h-4/5 ;
-      .title{
+    .welcome-content {
+      @apply max-w-[643px] text-center mx-auto w-full  grid place-content-center;
+      .title {
         @apply font-libre-caslon font-bold block
-        pt-5
-        text-5xl sm:text-6xl md:text-8xl;
+        pt-5;
         line-height: 1.5;
+        @extend .title-1-sizing;
       }
-      span{
+      span {
         @apply font-albert-sans font-bold uppercase 
         text-xs sm:text-sm  md:text-lg 
-        py-2 ;
-
+        py-2;
       }
-      p{
+      p {
         @apply font-albert-sans pt-4 md:pt-8
         text-[14px] sm:text-[16px] md:text-[17px];
         line-height: 1.5;
@@ -37,24 +25,20 @@
     }
   }
 
+  .welcome-footer {
+    @apply w-full
+    flex justify-center  bg-gradient-dark-bottom;
 
-
-  .welcome-footer{
-    @apply absolute bottom-0 left-0 w-full
-    flex justify-center 
-    ;
-
-    .welcome-footer-container{
-      @apply  flex justify-between container
+    .welcome-footer-container {
+      @apply flex justify-between container
       pl-2 pr-5
       pb-16 sm:pb-20 md:pb-28;
-      
-      .scroll{
+
+      .scroll {
         @apply w-fit h-fit -rotate-90 uppercase font-bold tracking-widest 
-        text-xs sm:text-sm md:text-base translate-y-8 ;
+        text-xs sm:text-sm md:text-base translate-y-8;
 
-
-        &:after{
+        &:after {
           @apply content-[""] absolute  rounded-3xl
           h-[2px] 
           w-[40px] sm:w-[60px] md:w-[80px]
@@ -65,23 +49,22 @@
         }
       }
 
-      .welcome-links{
-        li{
-          @apply py-2 sm:py-2.5 md:p-3
+      .welcome-links {
+        li {
+          @apply py-2 sm:py-2.5 md:p-3;
         }
 
-        a{
+        a {
           @apply text-green-light transition-all duration-150;
-          &:hover{
+          &:hover {
             @apply text-green-light/70;
-            svg{
-              @apply scale-110
+            svg {
+              @apply scale-110;
             }
           }
 
-          svg{
-            @apply 
-            w-4 h-4
+          svg {
+            @apply w-4 h-4
             sm:w-5 sm:h-5
             md:w-6 md:h-6;
           }

@@ -22,12 +22,22 @@ body {
   sm:px-0;
 }
 
-*{
-  @apply outline-none ; 
-  &::selection{
-    @apply bg-blue-light/70 text-black/95; 
-    
+* {
+  @apply outline-none;
+  &::selection {
+    @apply bg-blue-light/70 text-black/95;
   }
+}
+
+.title-1-sizing {
+  @apply text-5xl sm:text-6xl md:text-8xl;
+}
+
+.title-2-sizing {
+  @apply text-3xl sm:text-4xl md:text-5xl;
+}
+.text-2-sizing {
+  @apply text-xs sm:text-sm md:text-base;
 }
 
 /* Gradient transition */

@@ -14,6 +14,7 @@ const config: Config = {
         dark: "#474A56",
         "blue-light": "#00C9E0",
         "green-light": "#41EAD4",
+        purple: "#BE41EA",
 
         "blue-dark": "#011627",
         black: "#0B0B0D",
@@ -23,6 +24,8 @@ const config: Config = {
           "linear-gradient(180deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%)",
         "gradient-dark-top":
           "linear-gradient(0deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%)",
+        "gradient-dark-top-2":
+          "linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, #011627 100%)",
         "gradient-dark-top-light":
           "linear-gradient(0deg, rgba(255 255 255 / 0) 0%, #01162793 76.64%, #011627fB 100%)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
