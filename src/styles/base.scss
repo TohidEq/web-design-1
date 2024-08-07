@@ -40,6 +40,26 @@ body {
   @apply text-xs sm:text-sm md:text-base;
 }
 
+.btn-1 {
+  @apply bg-blue-light text-white transition-all duration-150 font-bold 
+  text-center rounded-full relative
+  text-xs sm:text-sm md:text-base
+  py-2 md:py-4;
+
+  &:hover {
+    @apply bg-blue-light/60;
+  }
+  &:after {
+    @apply content-[""] bg-white 
+      absolute  
+      rounded-2xl
+      w-[10px] md:w-[30px] 
+      h-[2px]  
+      top-1/2 -translate-y-1/2 
+      right-0 translate-x-1/2;
+  }
+}
+
 /* Gradient transition */
 
 /*

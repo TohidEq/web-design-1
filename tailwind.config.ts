@@ -17,6 +17,7 @@ const config: Config = {
         purple: "#BE41EA",
 
         "blue-dark": "#011627",
+        "blue-dark-1": "#011627",
         black: "#0B0B0D",
       },
       backgroundImage: {

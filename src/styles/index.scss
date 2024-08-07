@@ -706,6 +706,85 @@ body {
   }
 }
 
+.btn-1{
+  position: relative;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 201 224 / var(--tw-bg-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@media (min-width: 640px){
+  .btn-1{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 768px){
+  .btn-1{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.btn-1 {
+  &:hover{
+    background-color: rgb(0 201 224 / 0.6);
+  }
+  &:after{
+    position: absolute;
+  }
+  &:after{
+    top: 50%;
+  }
+  &:after{
+    right: 0px;
+  }
+  &:after{
+    height: 2px;
+  }
+  &:after{
+    width: 10px;
+  }
+  &:after{
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  &:after{
+    --tw-translate-x: 50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  &:after{
+    border-radius: 1rem;
+  }
+  &:after{
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+  &:after{
+    --tw-content: "";
+    content: var(--tw-content);
+  }
+  @media (min-width: 768px){
+    &:after{
+      width: 30px;
+    }
+  }
+}
+
 /* Gradient transition */
 
 /*
@@ -880,7 +959,7 @@ background: linear-gradient(
           padding-right: 0.75rem;
         }
       }
-      .nav-search-container{
+      .nav-search-container {
         form {
           input{
             max-width: 100px;
@@ -941,7 +1020,7 @@ background: linear-gradient(
           }
         }
       }
-      &.show{
+      &.show {
         .nav-search-container{
           background-color: rgb(146 154 171 / 0.2);
         }
@@ -956,7 +1035,7 @@ background: linear-gradient(
           padding-right: 0.5rem;
         }
       }
-      &.hide{
+      &.hide {
         input{
           width: 0px;
         }
@@ -978,7 +1057,7 @@ background: linear-gradient(
           width: 10rem;
         }
       }
-      .nav-menu-btn{
+      .nav-menu-btn {
         svg{
           margin-left: auto;
           margin-right: auto;
@@ -990,99 +1069,8 @@ background: linear-gradient(
           width: 0.875rem;
         }
       }
-      .nav-links-item{
-        position: relative;
-      }
-      .nav-links-item{
-        border-radius: 9999px;
-      }
-      .nav-links-item{
-        --tw-bg-opacity: 1;
-        background-color: rgb(0 201 224 / var(--tw-bg-opacity));
-      }
-      .nav-links-item{
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-      }
-      .nav-links-item{
-        text-align: center;
-      }
-      .nav-links-item{
-        font-size: 0.75rem;
-        line-height: 1rem;
-      }
-      .nav-links-item{
-        font-weight: 700;
-      }
-      .nav-links-item{
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 150ms;
-      }
-      .nav-links-item{
-        transition-duration: 150ms;
-      }
-      @media (min-width: 640px){
-        .nav-links-item{
-          font-size: 0.875rem;
-          line-height: 1.25rem;
-        }
-      }
-      @media (min-width: 768px){
-        .nav-links-item{
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-        }
-      }
-      @media (min-width: 768px){
-        .nav-links-item{
-          font-size: 1rem;
-          line-height: 1.5rem;
-        }
-      }
       .nav-links-item {
-        &:hover{
-          background-color: rgb(0 201 224 / 0.6);
-        }
-        &:after{
-          position: absolute;
-        }
-        &:after{
-          top: 50%;
-        }
-        &:after{
-          right: 0px;
-        }
-        &:after{
-          height: 2px;
-        }
-        &:after{
-          width: 10px;
-        }
-        &:after{
-          --tw-translate-y: -50%;
-          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-        }
-        &:after{
-          --tw-translate-x: 50%;
-          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-        }
-        &:after{
-          border-radius: 1rem;
-        }
-        &:after{
-          --tw-bg-opacity: 1;
-          background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-        }
-        &:after{
-          --tw-content: "";
-          content: var(--tw-content);
-        }
-        @media (min-width: 768px){
-          &:after{
-            width: 30px;
-          }
-        }
+        @extend .btn-1;
       }
       .nav-menu-items{
         position: absolute;
@@ -1101,9 +1089,9 @@ background: linear-gradient(
       .nav-menu-items{
         transition-duration: 150ms;
       }
-      .nav-menu-items{
-        .nav-menu-item a{
-          @extend .nav-links-item
+      .nav-menu-items {
+        .nav-menu-item a {
+          @extend .btn-1
         }
         .nav-menu-item a{
           position: relative;
@@ -1122,7 +1110,7 @@ background: linear-gradient(
             width: 10rem;
           }
         }
-        .nav-menu-item a{
+        .nav-menu-item a {
           &:before{
             visibility: hidden;
           }
@@ -1183,12 +1171,14 @@ background: linear-gradient(
         &.hide{
           opacity: 0;
         }
-        &, & *{
+        &,
+        & *{
           transition-property: all;
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-duration: 150ms;
         }
-        &, & *{
+        &,
+        & *{
           transition-duration: 150ms;
         }
       }
@@ -1691,7 +1681,7 @@ background: linear-gradient(
         position: absolute;
       }
       &::after{
-        bottom: 0px;
+        top: 90vh;
       }
       &::after{
         right: 0px;
@@ -1733,7 +1723,7 @@ background: linear-gradient(
         position: absolute;
       }
       &::before{
-        bottom: 0px;
+        top: 90vh;
       }
       &::before{
         right: 0px;
@@ -1925,6 +1915,195 @@ background: linear-gradient(
         }
         p {
           @extend .text-2-sizing;
+        }
+      }
+    }
+  }
+  .pyt-tabs{
+    width: 100%;
+  }
+  @media (min-width: 640px){
+    .pyt-tabs{
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 768px){
+    .pyt-tabs{
+      max-width: 768px;
+    }
+  }
+  @media (min-width: 1024px){
+    .pyt-tabs{
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 1280px){
+    .pyt-tabs{
+      max-width: 1280px;
+    }
+  }
+  @media (min-width: 1536px){
+    .pyt-tabs{
+      max-width: 1536px;
+    }
+  }
+  .pyt-tabs{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pyt-tabs {
+    .pyt-tab-list{
+      display: grid;
+    }
+    .pyt-tab-list{
+      width: 100%;
+    }
+    .pyt-tab-list{
+      grid-auto-flow: column;
+    }
+    .pyt-tab-list{
+      justify-content: stretch;
+    }
+    .pyt-tab-list{
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
+    .pyt-tab-list{
+      text-align: center;
+    }
+    @media (min-width: 768px){
+      .pyt-tab-list{
+        padding-left: 7rem;
+        padding-right: 7rem;
+      }
+    }
+    .pyt-tab-list {
+      .pyt-tab{
+        position: relative;
+      }
+      .pyt-tab{
+        cursor: pointer;
+      }
+      .pyt-tab{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .pyt-tab{
+        font-family: Albert Sans, sans-serif;
+      }
+      .pyt-tab{
+        font-size: 0.75rem;
+        line-height: 1rem;
+      }
+      .pyt-tab{
+        font-weight: 700;
+      }
+      .pyt-tab{
+        color: rgb(255 255 255 / 0.5);
+      }
+      .pyt-tab{
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .pyt-tab{
+        transition-duration: 150ms;
+      }
+      @media (min-width: 640px){
+        .pyt-tab{
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+      @media (min-width: 768px){
+        .pyt-tab{
+          padding-top: 0.75rem;
+          padding-bottom: 0.75rem;
+        }
+      }
+      @media (min-width: 768px){
+        .pyt-tab{
+          font-size: 1.125rem;
+          line-height: 1.75rem;
+        }
+      }
+      .pyt-tab {
+        &.react-tabs__tab--selected{
+          --tw-text-opacity: 1;
+          color: rgb(65 234 212 / var(--tw-text-opacity));
+        }
+        &.react-tabs__tab--selected {
+          &::after{
+            height: 4px;
+          }
+          &::after{
+            border-radius: 1.5rem;
+          }
+          &::after{
+            --tw-bg-opacity: 1;
+            background-color: rgb(65 234 212 / var(--tw-bg-opacity));
+          }
+          &::after{
+            opacity: 1;
+          }
+        }
+        &::after{
+          position: absolute;
+        }
+        &::after{
+          left: 0px;
+        }
+        &::after{
+          bottom: 0px;
+        }
+        &::after{
+          height: 2px;
+        }
+        &::after{
+          width: 100%;
+        }
+        &::after{
+          --tw-bg-opacity: 1;
+          background-color: rgb(65 234 212 / var(--tw-bg-opacity));
+        }
+        &::after{
+          opacity: 0.3;
+        }
+        &::after{
+          transition-property: all;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 150ms;
+        }
+        &::after{
+          transition-duration: 300ms;
+        }
+        &::after{
+          --tw-content: "";
+          content: var(--tw-content);
+        }
+        @media (min-width: 768px){
+          &:hover{
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity));
+          }
+        }
+        &:hover {
+          @media (min-width: 768px){
+            &::after{
+              height: 3px;
+            }
+          }
+          @media (min-width: 768px){
+            &::after{
+              --tw-bg-opacity: 1;
+              background-color: rgb(65 234 212 / var(--tw-bg-opacity));
+            }
+          }
+          @media (min-width: 768px){
+            &::after{
+              opacity: 0.6;
+            }
+          }
         }
       }
     }
