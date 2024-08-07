@@ -7,7 +7,7 @@
   }
 
   &.scrolled {
-    @apply bg-gradient-dark-top-light
+    @apply bg-gradient-dark-top-light   backdrop-blur-[2px]
     h-20 md:h-28;
   }
 

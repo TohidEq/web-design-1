@@ -826,6 +826,11 @@ background: linear-gradient(
   &.scrolled{
     background-image: linear-gradient(0deg, rgba(255 255 255 / 0) 0%, #01162793 76.64%, #011627fB 100%);
   }
+  &.scrolled{
+    --tw-backdrop-blur: blur(2px);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  }
   @media (min-width: 768px){
     &.scrolled{
       height: 7rem;
@@ -2081,28 +2086,20 @@ background: linear-gradient(
           --tw-content: "";
           content: var(--tw-content);
         }
-        @media (min-width: 768px){
-          &:hover{
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255 / var(--tw-text-opacity));
-          }
+        &:hover:not(.react-tabs__tab--selected){
+          --tw-text-opacity: 1;
+          color: rgb(255 255 255 / var(--tw-text-opacity));
         }
-        &:hover {
-          @media (min-width: 768px){
-            &::after{
-              height: 3px;
-            }
+        &:hover:not(.react-tabs__tab--selected) {
+          &::after{
+            height: 3px;
           }
-          @media (min-width: 768px){
-            &::after{
-              --tw-bg-opacity: 1;
-              background-color: rgb(65 234 212 / var(--tw-bg-opacity));
-            }
+          &::after{
+            --tw-bg-opacity: 1;
+            background-color: rgb(65 234 212 / var(--tw-bg-opacity));
           }
-          @media (min-width: 768px){
-            &::after{
-              opacity: 0.6;
-            }
+          &::after{
+            opacity: 0.6;
           }
         }
       }

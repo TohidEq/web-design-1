@@ -92,10 +92,10 @@
           @apply content-[""] transition-all duration-300 absolute w-full h-[2px] left-0 bottom-0 bg-green-light opacity-30;
         }
 
-        &:hover {
-          @apply md:text-white;
+        &:hover:not(.react-tabs__tab--selected) {
+          @apply text-white;
           &::after {
-            @apply md:h-[3px] md:bg-green-light md:opacity-60;
+            @apply h-[3px] bg-green-light opacity-60;
           }
         }
       }
