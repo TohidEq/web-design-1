@@ -18,6 +18,7 @@ const config: Config = {
 
         "blue-dark": "#011627",
         "blue-dark-1": "#011627",
+        "blue-dark-2": "#133149",
         black: "#0B0B0D",
       },
       backgroundImage: {
@@ -36,10 +37,12 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 
         welcome: "url('/images/welcome-background.jpg')",
+        "pick-your-trip": "url('/images/pick-your-trip/pick-your-trip.jpg')",
       },
       dropShadow: {
         glow: ["0px 0px 8px #D3D5FD"],
         glow2: ["0px 0px 8px #D3D5FD", "0px 0px 8px #D3D5FD"],
+        "glow-btn-1": ["0px 2px 4px #00C9E0a0"],
         "glow-link-1": ["0px 0px 9px #D3D5FD"],
         "glow-link-2": ["0px 0px 9px #D3D5FD", "0px 0px 9px #D3D5FD"],
         "glow-link-3": ["0px 0px 8px #D3D5FD", "0px 0px 8px #D3D5FD"],

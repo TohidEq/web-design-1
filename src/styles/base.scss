@@ -43,7 +43,8 @@ body {
 .btn-1 {
   @apply bg-blue-light text-white transition-all duration-150 font-bold 
   text-center rounded-full relative
-  text-xs sm:text-sm md:text-base
+  text-xs sm:text-sm md:text-base  
+  drop-shadow-glow-btn-1
   py-2 md:py-4;
 
   &:hover {

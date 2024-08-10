@@ -73,6 +73,7 @@
 
   .pyt-tabs {
     @apply container mx-auto;
+
     .pyt-tab-list {
       @apply w-full 
       text-center
@@ -100,5 +101,269 @@
         }
       }
     }
+
+    .pyt-tab-panel {
+      @apply grid grid-cols-2 pt-36 pb-36 relative;
+
+      .pyt-slideshow {
+        .svg-dots {
+          @apply absolute bottom-5 translate-x-1/4 -translate-y-1/3 left-0 -z-10;
+        }
+        div {
+          .react-slideshow-container {
+            @apply mr-20;
+            .btn {
+              @apply absolute bottom-0 right-0 p-5 border-blue-dark-2/50 bg-blue-dark/90 transition-all duration-200;
+              &:hover {
+                @apply opacity-70;
+              }
+              svg {
+                @apply w-6 h-6;
+              }
+              &.btn-left {
+                @apply w-fit -translate-x-full rounded-tl-lg border-r-[1px];
+              }
+              &.btn-right {
+                @apply rounded-br-lg border-l-[1px];
+              }
+            }
+            .each-slide-effect {
+              @apply ml-28;
+              .slide-image {
+                @apply h-[600px] w-full rounded-lg relative;
+              }
+              .title {
+                @apply absolute top-1/2 opacity-0 transition-all duration-500
+                w-1/2
+                font-bold font-albert-sans 
+                text-2xl leading-normal
+                -left-24;
+
+                .counter {
+                  @apply absolute w-[90%]
+                  font-bold font-albert-sans 
+                  text-green-light
+                  text-2xl leading-normal
+                  bottom-full left-0;
+
+                  &::after {
+                    @apply content-[""] absolute 
+                    w-[2px] h-3
+                    bg-green-light
+                    bottom-full left-0;
+                  }
+                  &::before {
+                    @apply content-[""] absolute 
+                    h-[2px] w-[80%]
+                    bg-green-light
+                    -top-3 left-0;
+                  }
+                }
+              }
+            }
+            .active {
+              .each-slide-effect {
+                .title {
+                  @apply opacity-100;
+                }
+              }
+            }
+          }
+        }
+      }
+      .pyt-tab-panel-content {
+        @apply font-albert-sans
+        grid grid-cols-1 gap-4 content-between pt-16 pr-20;
+        .title {
+          @apply font-libre-caslon font-bold text-6xl;
+        }
+        p {
+          @apply text-lg;
+          &.text {
+            @apply font-bold;
+          }
+          &.extra {
+          }
+        }
+        .link {
+          @extend .btn-1;
+          @apply w-fit px-10;
+        }
+
+        .links {
+          @apply flex justify-end  flex-wrap;
+          ul {
+            @apply flex justify-end relative;
+            span {
+              @apply absolute bottom-full left-0 uppercase font-bold tracking-wider
+              text-sm;
+            }
+            li {
+              a {
+                @apply block py-3 pl-0 pr-3;
+                svg {
+                  @apply text-green-light
+                  w-6 h-6;
+                }
+              }
+            }
+
+            &::after {
+              @apply content-[""] absolute bg-green-light w-[2px] h-2/3 -bottom-2 right-0;
+            }
+            &::before {
+              @apply content-[""] absolute bg-green-light h-[2px] w-full -bottom-2 right-0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* react slideshow */
+
+.react-slideshow-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+
+  .nav {
+    z-index: 10;
+    position: absolute;
+    cursor: pointer;
+
+    /*
+    &:first-of-type {
+      left: 0;
+    }
+    &:last-of-type {
+      right: 0;
+    }
+      */
+  }
+
+  .default-nav {
+    height: 30px;
+    background: rgba(255, 255, 255, 0.6);
+    width: 30px;
+    border: 0;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    &:hover,
+    &:focus {
+      background: #fff;
+      color: #666;
+      outline: 0;
+    }
+
+    &.disabled:hover {
+      cursor: not-allowed;
+    }
+    &:first-of-type {
+      margin-right: -30px;
+      border-right: 0;
+      border-top: 0;
+    }
+    &:last-of-type {
+      margin-left: -30px;
+    }
+  }
+  & + ul.indicators {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    li {
+      display: inline-block;
+      position: relative;
+      width: 7px;
+      height: 7px;
+      padding: 5px;
+      margin: 0;
+    }
+    .each-slideshow-indicator {
+      border: 0;
+      opacity: 0.25;
+      cursor: pointer;
+      background: transparent;
+      color: transparent;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        content: "";
+        background: #000;
+        text-align: center;
+      }
+
+      &:hover,
+      &:active {
+        opacity: 0.75;
+        outline: 0;
+      }
+    }
+  }
+}
+
+.react-slideshow-fadezoom-wrapper {
+  width: 100%;
+  overflow: hidden;
+
+  .react-slideshow-fadezoom-images-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    & > div {
+      position: relative;
+      opacity: 0;
+    }
+  }
+}
+
+.react-slideshow-wrapper {
+  .react-slideshow-fade-images-wrap > div[aria-hidden="true"] {
+    display: none;
+  }
+  &.slide {
+    width: 100%;
+    overflow: hidden;
+  }
+  .images-wrap.horizontal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .images-wrap > div[aria-hidden="true"] {
+    display: none;
   }
 }
