@@ -2251,7 +2251,7 @@ background: linear-gradient(
                 line-height: 1.5;
               }
               .title{
-                opacity: 0;
+                opacity: 1;
               }
               .title{
                 transition-property: all;
@@ -2338,13 +2338,6 @@ background: linear-gradient(
                     --tw-content: "";
                     content: var(--tw-content);
                   }
-                }
-              }
-            }
-            .active {
-              .each-slide-effect {
-                .title{
-                  opacity: 1;
                 }
               }
             }

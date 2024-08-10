@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Slide } from "react-slideshow-image";
+import { Fade } from "react-slideshow-image";
 // import "react-slideshow-image/dist/styles.css";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
@@ -180,7 +180,7 @@ function PytSlideshow({ items }: Props) {
 
   return (
     <div className="">
-      <Slide {...properties}>
+      <Fade {...properties}>
         {items.map((item, index) => (
           <div className="each-slide-effect" key={index}>
             <div className={`${item.image} slide-image`}>
@@ -191,7 +191,7 @@ function PytSlideshow({ items }: Props) {
             </div>
           </div>
         ))}
-      </Slide>
+      </Fade>
       {svgDots}
     </div>
   );
