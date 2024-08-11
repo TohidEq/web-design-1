@@ -1,7 +1,6 @@
 .pyt {
   @apply min-h-screen relative w-full
-  text-white 
-  border-2 border-red-200;
+  text-white;
 
   .pyt-bg {
     @apply absolute w-full h-full bg-blue-dark
