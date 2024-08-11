@@ -691,6 +691,63 @@ body {
   }
 }
 
+.title-3-sizing{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media (min-width: 640px){
+  .title-3-sizing{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 768px){
+  .title-3-sizing{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.title-4-sizing{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 640px){
+  .title-4-sizing{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 768px){
+  .title-4-sizing{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.text-1-sizing{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 640px){
+  .text-1-sizing{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 768px){
+  .text-1-sizing{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
 .text-2-sizing{
   font-size: 0.75rem;
   line-height: 1rem;
@@ -707,6 +764,18 @@ body {
   .text-2-sizing{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+}
+
+.text-3-sizing{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@media (min-width: 768px){
+  .text-3-sizing{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2114,19 +2183,40 @@ background: linear-gradient(
       position: relative;
     }
     .pyt-tab-panel{
-      display: grid;
+      display: flex;
     }
     .pyt-tab-panel{
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      flex-wrap: wrap;
     }
     .pyt-tab-panel{
-      padding-top: 9rem;
+      padding-top: 3rem;
     }
     .pyt-tab-panel{
       padding-bottom: 9rem;
     }
+    @media (min-width: 1024px){
+      .pyt-tab-panel{
+        padding-top: 9rem;
+      }
+    }
     .pyt-tab-panel {
+      .pyt-slideshow{
+        width: 100%;
+      }
+      @media (min-width: 768px){
+        .pyt-slideshow{
+          width: 50%;
+        }
+      }
+      @media (min-width: 1024px){
+        .pyt-slideshow{
+          width: 45%;
+        }
+      }
       .pyt-slideshow {
+        .svg-dots{
+          visibility: hidden;
+        }
         .svg-dots{
           position: absolute;
         }
@@ -2147,9 +2237,27 @@ background: linear-gradient(
           --tw-translate-y: -33.333333%;
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
         }
+        @media (min-width: 768px){
+          .svg-dots{
+            visibility: visible;
+          }
+        }
+        div{
+          height: 100%;
+        }
         div {
           .react-slideshow-container{
-            margin-right: 5rem;
+            margin-right: 1.25rem;
+          }
+          @media (min-width: 768px){
+            .react-slideshow-container{
+              margin-right: 1rem;
+            }
+          }
+          @media (min-width: 1280px){
+            .react-slideshow-container{
+              margin-right: 7rem;
+            }
           }
           .react-slideshow-container {
             .btn{
@@ -2168,7 +2276,7 @@ background: linear-gradient(
               background-color: rgb(1 22 39 / 0.9);
             }
             .btn{
-              padding: 1.25rem;
+              padding: 0.75rem;
             }
             .btn{
               transition-property: all;
@@ -2178,15 +2286,30 @@ background: linear-gradient(
             .btn{
               transition-duration: 200ms;
             }
+            @media (min-width: 1024px){
+              .btn{
+                padding: 1.25rem;
+              }
+            }
             .btn {
               &:hover{
                 opacity: 0.7;
               }
               svg{
-                height: 1.5rem;
+                height: 1rem;
               }
               svg{
-                width: 1.5rem;
+                width: 1rem;
+              }
+              @media (min-width: 1024px){
+                svg{
+                  height: 1.5rem;
+                }
+              }
+              @media (min-width: 1024px){
+                svg{
+                  width: 1.5rem;
+                }
               }
               &.btn-left{
                 width: -moz-fit-content;
@@ -2210,20 +2333,39 @@ background: linear-gradient(
               }
             }
             .each-slide-effect{
-              margin-left: 7rem;
+              margin-left: 4rem;
+            }
+            @media (min-width: 768px){
+              .each-slide-effect{
+                margin-left: 7rem;
+              }
             }
             .each-slide-effect {
               .slide-image{
                 position: relative;
               }
               .slide-image{
-                height: 600px;
+                height: 100%;
+              }
+              .slide-image{
+                min-height: 400px;
               }
               .slide-image{
                 width: 100%;
               }
               .slide-image{
                 border-radius: 0.5rem;
+              }
+              .slide-image{
+                background-size: cover;
+              }
+              .slide-image{
+                background-position: center;
+              }
+              @media (min-width: 1024px){
+                .slide-image{
+                  height: 600px;
+                }
               }
               .title{
                 position: absolute;
@@ -2232,17 +2374,17 @@ background: linear-gradient(
                 top: 50%;
               }
               .title{
-                left: -6rem;
+                left: -3rem;
+              }
+              .title{
+                height: -moz-fit-content;
+                height: fit-content;
               }
               .title{
                 width: 50%;
               }
               .title{
                 font-family: Albert Sans, sans-serif;
-              }
-              .title{
-                font-size: 1.5rem;
-                line-height: 2rem;
               }
               .title{
                 font-weight: 700;
@@ -2261,7 +2403,28 @@ background: linear-gradient(
               .title{
                 transition-duration: 500ms;
               }
+              @media (min-width: 768px){
+                .title{
+                  left: -5rem;
+                }
+              }
+              @media (min-width: 768px){
+                .title{
+                  width: 80%;
+                }
+              }
+              @media (min-width: 768px){
+                .title{
+                  min-width: 280px;
+                }
+              }
+              @media (min-width: 1024px){
+                .title{
+                  left: -6rem;
+                }
+              }
               .title {
+                @extend .title-4-sizing;
                 .counter{
                   position: absolute;
                 }
@@ -2348,6 +2511,9 @@ background: linear-gradient(
         display: grid;
       }
       .pyt-tab-panel-content{
+        width: 100%;
+      }
+      .pyt-tab-panel-content{
         grid-template-columns: repeat(1, minmax(0, 1fr));
       }
       .pyt-tab-panel-content{
@@ -2357,30 +2523,60 @@ background: linear-gradient(
         gap: 1rem;
       }
       .pyt-tab-panel-content{
-        padding-top: 4rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
       }
       .pyt-tab-panel-content{
-        padding-right: 5rem;
+        padding-top: 2rem;
       }
       .pyt-tab-panel-content{
         font-family: Albert Sans, sans-serif;
       }
+      @media (min-width: 640px){
+        .pyt-tab-panel-content{
+          padding-left: 4rem;
+        }
+      }
+      @media (min-width: 768px){
+        .pyt-tab-panel-content{
+          width: 50%;
+        }
+      }
+      @media (min-width: 768px){
+        .pyt-tab-panel-content{
+          padding-right: 5rem;
+        }
+      }
+      @media (min-width: 768px){
+        .pyt-tab-panel-content{
+          padding-left: 1.25rem;
+        }
+      }
+      @media (min-width: 1024px){
+        .pyt-tab-panel-content{
+          width: 55%;
+        }
+      }
+      @media (min-width: 1024px){
+        .pyt-tab-panel-content{
+          padding-top: 4rem;
+        }
+      }
       .pyt-tab-panel-content {
-        .title{
-          font-family: Libre Caslon Text, serif;
+        .title {
+          @extend .title-2-sizing;
         }
         .title{
-          font-size: 3.75rem;
-          line-height: 1;
+          font-family: Libre Caslon Text, serif;
         }
         .title{
           font-weight: 700;
         }
         p{
-          font-size: 1.125rem;
-          line-height: 1.75rem;
+          max-width: 510px;
         }
         p {
+          @extend .text-1-sizing;
           &.text{
             font-weight: 700;
           }
@@ -2395,8 +2591,14 @@ background: linear-gradient(
           width: fit-content;
         }
         .link{
-          padding-left: 2.5rem;
-          padding-right: 2.5rem;
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+        }
+        @media (min-width: 768px){
+          .link{
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+          }
         }
         .links{
           display: flex;
@@ -2406,6 +2608,14 @@ background: linear-gradient(
         }
         .links{
           justify-content: flex-end;
+        }
+        .links{
+          padding-top: 1rem;
+        }
+        @media (min-width: 1024px){
+          .links{
+            padding-top: 2rem;
+          }
         }
         .links {
           ul{
@@ -2428,10 +2638,6 @@ background: linear-gradient(
               left: 0px;
             }
             span{
-              font-size: 0.875rem;
-              line-height: 1.25rem;
-            }
-            span{
               font-weight: 700;
             }
             span{
@@ -2440,30 +2646,54 @@ background: linear-gradient(
             span{
               letter-spacing: 0.05em;
             }
+            span {
+              @extend .text-3-sizing;
+            }
             li {
               a{
                 display: block;
               }
               a{
-                padding-top: 0.75rem;
-                padding-bottom: 0.75rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
               }
               a{
                 padding-left: 0px;
               }
               a{
-                padding-right: 0.75rem;
+                padding-right: 1rem;
+              }
+              @media (min-width: 1024px){
+                a{
+                  padding-top: 0.75rem;
+                  padding-bottom: 0.75rem;
+                }
+              }
+              @media (min-width: 1024px){
+                a{
+                  padding-right: 0.75rem;
+                }
               }
               a {
                 svg{
-                  height: 1.5rem;
+                  height: 1rem;
                 }
                 svg{
-                  width: 1.5rem;
+                  width: 1rem;
                 }
                 svg{
                   --tw-text-opacity: 1;
                   color: rgb(65 234 212 / var(--tw-text-opacity));
+                }
+                @media (min-width: 1024px){
+                  svg{
+                    height: 1.5rem;
+                  }
+                }
+                @media (min-width: 1024px){
+                  svg{
+                    width: 1.5rem;
+                  }
                 }
               }
             }
