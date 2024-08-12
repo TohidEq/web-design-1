@@ -30,6 +30,8 @@ const config: Config = {
           "linear-gradient(0deg, hsla(0, 0%, 100%, 0) 0%, #011627 100%)",
         "gradient-dark-top-light":
           "linear-gradient(0deg, rgba(255 255 255 / 0) 0%, #01162793 76.64%, #011627fB 100%)",
+        "gradient-dark-bottom-light":
+          "linear-gradient(180deg, rgba(255 255 255 / 0) 0%, #01162793 76.64%, #011627fB 100%)",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-white-top":
           "linear-gradient(180deg, rgba(255 255 255 / 0) 0%, #ffffff 76.64%, #ffffff 100%)",
@@ -38,6 +40,7 @@ const config: Config = {
 
         welcome: "url('/images/welcome-background.jpg')",
         "pick-your-trip": "url('/images/pick-your-trip/pick-your-trip.jpg')",
+        "about-us": "url('/images/about-us/about-us-background.jpg')",
       },
       dropShadow: {
         glow: ["0px 0px 8px #D3D5FD"],
