@@ -700,8 +700,37 @@ function AUGallery({}: Props) {
 
         <p className="text">
           Our everyday task is to make sure that you satisfied with the services
-          and products that we provide. With 💖 from Amsterdam, Netherlands.
+          and products that we provide.
         </p>
+        <p className="text">
+          <b>With 💖 from Amsterdam, Netherlands.</b>
+        </p>
+      </div>
+      <div className="images">
+        <div className={`image bg-[url(/images/about-us/about-us-1.jpg)]`}>
+          <div className="image-text">
+            Martin Jack
+            <span>ceo</span>
+          </div>
+        </div>
+        <div className={`image bg-[url(/images/about-us/about-us-2.jpg)]`}>
+          <div className="image-text">
+            Kokab Jafari
+            <span>Farm</span>
+          </div>
+        </div>
+        <div className={`image bg-[url(/images/about-us/about-us-3.jpg)]`}>
+          <div className="image-text">
+            Lisa Lisazade
+            <span>Design</span>
+          </div>
+        </div>
+        <div className={`image bg-[url(/images/about-us/about-us-4.jpg)]`}>
+          <div className="image-text">
+            Happy Mappy
+            <span>smile</span>
+          </div>
+        </div>
       </div>
     </div>
   );

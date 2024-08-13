@@ -573,6 +573,22 @@ video {
   background-image: url('/images/pick-your-trip/pick-your-trip.jpg');
 }
 
+.bg-\[url\(\/images\/about-us\/about-us-1\.jpg\)\]{
+  background-image: url(/images/about-us/about-us-1.jpg);
+}
+
+.bg-\[url\(\/images\/about-us\/about-us-2\.jpg\)\]{
+  background-image: url(/images/about-us/about-us-2.jpg);
+}
+
+.bg-\[url\(\/images\/about-us\/about-us-3\.jpg\)\]{
+  background-image: url(/images/about-us/about-us-3.jpg);
+}
+
+.bg-\[url\(\/images\/about-us\/about-us-4\.jpg\)\]{
+  background-image: url(/images/about-us/about-us-4.jpg);
+}
+
 /*
 Larsseit >>
 font-family: "Albert Sans", sans-serif;
@@ -2875,6 +2891,8 @@ background: linear-gradient(
   position: relative;
   min-height: 100vh;
   width: 100%;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
   &::after{
     position: absolute;
   }
@@ -3182,7 +3200,41 @@ background: linear-gradient(
         color: rgb(1 22 39 / var(--tw-text-opacity));
       }
     }
-    .about-us-gallery {
+    .about-us-gallery{
+      width: 100%;
+    }
+    @media (min-width: 640px){
+      .about-us-gallery{
+        max-width: 640px;
+      }
+    }
+    @media (min-width: 768px){
+      .about-us-gallery{
+        max-width: 768px;
+      }
+    }
+    @media (min-width: 1024px){
+      .about-us-gallery{
+        max-width: 1024px;
+      }
+    }
+    @media (min-width: 1280px){
+      .about-us-gallery{
+        max-width: 1280px;
+      }
+    }
+    @media (min-width: 1536px){
+      .about-us-gallery{
+        max-width: 1536px;
+      }
+    }
+    .about-us-gallery{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .about-us-gallery{
+      padding-top: 5rem;
+      padding-bottom: 5rem;
     }
   }
 }
