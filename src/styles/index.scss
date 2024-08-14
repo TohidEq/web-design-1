@@ -556,6 +556,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.relative{
+  position: relative;
+}
+
 .-scale-x-100{
   --tw-scale-x: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -567,10 +571,6 @@ video {
 
 .resize{
   resize: both;
-}
-
-.bg-pick-your-trip{
-  background-image: url('/images/pick-your-trip/pick-your-trip.jpg');
 }
 
 .bg-\[url\(\/images\/about-us\/about-us-1\.jpg\)\]{
@@ -587,6 +587,10 @@ video {
 
 .bg-\[url\(\/images\/about-us\/about-us-4\.jpg\)\]{
   background-image: url(/images/about-us/about-us-4.jpg);
+}
+
+.bg-pick-your-trip{
+  background-image: url('/images/pick-your-trip/pick-your-trip.jpg');
 }
 
 /*
@@ -1654,6 +1658,7 @@ background: linear-gradient(
   position: relative;
   min-height: 100vh;
   width: 100%;
+  padding-bottom: 10rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   .pyt-bg{
@@ -1778,16 +1783,16 @@ background: linear-gradient(
         position: absolute;
       }
       &::after{
-        top: 90vh;
+        top: 50vh;
       }
       &::after{
         right: 0px;
       }
       &::after{
-        height: 25%;
+        height: 20%;
       }
       &::after{
-        width: 33.333333%;
+        width: 25%;
       }
       &::after{
         --tw-bg-opacity: 1;
@@ -1820,16 +1825,16 @@ background: linear-gradient(
         position: absolute;
       }
       &::before{
-        top: 90vh;
+        top: 50vh;
       }
       &::before{
         right: 0px;
       }
       &::before{
-        height: 25%;
+        height: 20%;
       }
       &::before{
-        width: 33.333333%;
+        width: 25%;
       }
       &::before{
         --tw-translate-x: -11rem;
@@ -2211,9 +2216,6 @@ background: linear-gradient(
     .pyt-tab-panel{
       padding-top: 3rem;
     }
-    .pyt-tab-panel{
-      padding-bottom: 9rem;
-    }
     @media (min-width: 1024px){
       .pyt-tab-panel{
         padding-top: 9rem;
@@ -2235,31 +2237,44 @@ background: linear-gradient(
       }
       .pyt-slideshow {
         .svg-dots{
-          visibility: hidden;
+          visibility: visible;
         }
         .svg-dots{
           position: absolute;
         }
         .svg-dots{
-          bottom: 1.25rem;
+          left: 0px;
         }
         .svg-dots{
-          left: 0px;
+          top: 100%;
         }
         .svg-dots{
           z-index: -10;
         }
         .svg-dots{
-          --tw-translate-x: 25%;
+          --tw-translate-y: -75%;
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
         }
         .svg-dots{
-          --tw-translate-y: -33.333333%;
+          --tw-translate-x: 0.5rem;
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+        .svg-dots{
+          --tw-scale-x: .75;
+          --tw-scale-y: .75;
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
         }
         @media (min-width: 768px){
           .svg-dots{
-            visibility: visible;
+            --tw-translate-x: 25%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          }
+        }
+        @media (min-width: 768px){
+          .svg-dots{
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           }
         }
         div{
@@ -2587,6 +2602,9 @@ background: linear-gradient(
           @extend .title-2-sizing;
         }
         .title{
+          padding-top: 1.25rem;
+        }
+        .title{
           font-family: Libre Caslon Text, serif;
         }
         .title{
@@ -2893,56 +2911,6 @@ background: linear-gradient(
   width: 100%;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-  &::after{
-    position: absolute;
-  }
-  &::after{
-    bottom: 100%;
-  }
-  &::after{
-    left: 0px;
-  }
-  &::after{
-    height: 5rem;
-  }
-  &::after{
-    width: 100%;
-  }
-  &::after{
-    background-image: linear-gradient(180deg, rgba(255 255 255 / 0) 0%, #01162793 76.64%, #011627fB 100%);
-  }
-  &::after{
-    opacity: 1;
-  }
-  &::after{
-    --tw-content: "";
-    content: var(--tw-content);
-  }
-  &::before{
-    position: absolute;
-  }
-  &::before{
-    top: 0px;
-  }
-  &::before{
-    left: 0px;
-  }
-  &::before{
-    height: 5rem;
-  }
-  &::before{
-    width: 100%;
-  }
-  &::before{
-    background-image: linear-gradient(0deg, rgba(255 255 255 / 0) 0%, #01162793 76.64%, #011627fB 100%);
-  }
-  &::before{
-    opacity: 1;
-  }
-  &::before{
-    --tw-content: "";
-    content: var(--tw-content);
-  }
   .about-us{
     position: relative;
   }

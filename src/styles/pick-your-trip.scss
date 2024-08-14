@@ -1,6 +1,6 @@
 .pyt {
   @apply min-h-screen relative w-full
-  text-white;
+  text-white pb-40;
 
   .pyt-bg {
     @apply absolute w-full h-full bg-blue-dark
@@ -24,16 +24,16 @@
     .item-2 {
       &::after {
         @apply content-[""]
-        absolute w-1/3 h-1/4
+        absolute w-1/4 h-1/5
         bg-green-light opacity-30
-        top-[90vh] right-0
+        top-[50vh] right-0
         blur-[90px] sm:blur-[140px] md:blur-[200px];
       }
       &::before {
         @apply content-[""]
-        absolute w-1/3 h-1/4
+        absolute w-1/4 h-1/5
         bg-purple opacity-30 
-        top-[90vh] right-0 -translate-x-44 -translate-y-40
+        top-[50vh] right-0 -translate-x-44 -translate-y-40
         blur-[90px] sm:blur-[140px] md:blur-[200px];
       }
     }
@@ -104,13 +104,21 @@
     .pyt-tab-panel {
       @apply flex flex-wrap
       relative
-      pt-12 lg:pt-36 pb-36;
+      pt-12 lg:pt-36;
 
       .pyt-slideshow {
         @apply w-full md:w-[50%] lg:w-[45%];
         .svg-dots {
-          @apply absolute bottom-5 translate-x-1/4 -translate-y-1/3 left-0 -z-10
-          invisible md:visible;
+          @apply absolute 
+          -z-10
+          left-0
+          top-full
+          -translate-y-3/4
+          translate-x-2
+          md:translate-x-1/4 
+          scale-75
+          md:scale-100
+          visible;
         }
         div {
           @apply h-full;
@@ -181,7 +189,7 @@
         w-full md:w-[50%] lg:w-[55%];
         .title {
           @extend .title-2-sizing;
-          @apply font-libre-caslon font-bold;
+          @apply font-libre-caslon pt-5 font-bold;
         }
         p {
           @apply max-w-[510px];

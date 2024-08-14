@@ -1,11 +1,6 @@
 .about-us-section {
   @apply w-full min-h-screen relative text-white;
-  &::after {
-    @apply opacity-100 content-[""] absolute w-full h-20 bg-gradient-dark-bottom-light bottom-full left-0;
-  }
-  &::before {
-    @apply opacity-100 content-[""] absolute w-full h-20 bg-gradient-dark-top-light top-0 left-0;
-  }
+
   .about-us {
     @apply relative min-h-screen -z-10 bg-about-us bg-cover bg-left-bottom;
     background-color: rgba(0, 0, 0, 0.3);

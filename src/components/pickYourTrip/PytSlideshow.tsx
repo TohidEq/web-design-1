@@ -179,7 +179,7 @@ function PytSlideshow({ items }: Props) {
   };
 
   return (
-    <div className="">
+    <div className="relative">
       <Fade {...properties}>
         {items.map((item, index) => (
           <div className="each-slide-effect" key={index}>
