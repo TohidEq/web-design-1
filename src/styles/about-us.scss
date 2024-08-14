@@ -52,11 +52,12 @@
 
     .about-us-gallery {
       @apply container mx-auto
-      grid grid-cols-8 gap-x-10 gap-y-9;
+      grid grid-cols-8 gap-x-10 gap-y-9 md:gap-y-16;
 
       .texts {
         @apply col-span-full lg:col-span-3 font-albert-sans 
         px-2
+        md:pl-28
         lg:pr-0
         lg:pl-28;
 
@@ -78,11 +79,11 @@
       .images {
         @apply col-span-full lg:col-span-5 
         relative grid grid-cols-2
-        pl-2
-        mr-[30px]
-        
-        sm:mr-28
-        md:ml-0 
+        ml-2
+        mr-7
+        md:mx-28
+        lg:pl-2
+        lg:ml-0
         lg:mr-28;
 
         .image {
