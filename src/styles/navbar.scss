@@ -77,13 +77,13 @@
       }
 
       .nav-links-item {
-        @extend .btn-1;
+        @extend .btn-1, .text-2-sizing;
       }
       .nav-menu-items {
         @apply absolute right-0 top-full  transition-all duration-150;
 
         .nav-menu-item a {
-          @extend .btn-1;
+          @extend .btn-1, .text-2-sizing;
           @apply mt-2 
           w-32 md:w-40
           block relative;

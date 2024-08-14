@@ -1,6 +1,6 @@
 .pyt {
   @apply min-h-screen relative w-full
-  text-white pb-40;
+  text-white pb-16 md:pb-40;
 
   .pyt-bg {
     @apply absolute w-full h-full bg-blue-dark
@@ -201,7 +201,7 @@
           }
         }
         .link {
-          @extend .btn-1;
+          @extend .btn-1, .text-2-sizing;
           @apply w-fit px-5 md:px-10;
         }
 

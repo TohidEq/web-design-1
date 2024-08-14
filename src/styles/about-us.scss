@@ -2,7 +2,7 @@
   @apply w-full min-h-screen relative text-white;
 
   .about-us {
-    @apply relative min-h-screen -z-10 bg-about-us bg-cover bg-left-bottom;
+    @apply relative min-h-screen z-20 bg-about-us bg-cover bg-left-bottom;
     background-color: rgba(0, 0, 0, 0.3);
     background-blend-mode: hard-light;
 
@@ -52,7 +52,90 @@
 
     .about-us-gallery {
       @apply container mx-auto
-      py-20;
+      grid grid-cols-8 gap-x-10 gap-y-9;
+
+      .texts {
+        @apply col-span-full lg:col-span-3 font-albert-sans 
+        px-2
+        lg:pr-0
+        lg:pl-28;
+
+        .title {
+          @apply font-libre-caslon font-bold  pb-5 md:py-10;
+          @extend .title-2-sizing;
+        }
+        .text {
+          @apply pb-5 max-w-80;
+          @extend .text-2-sizing;
+        }
+        .link {
+          @extend .btn-1, .text-3-sizing;
+          @apply uppercase font-bold font-albert-sans px-4 md:px-7
+          text-xs;
+        }
+      }
+
+      .images {
+        @apply col-span-full lg:col-span-5 
+        relative grid grid-cols-2
+        pl-2
+        mr-[30px]
+        
+        sm:mr-28
+        md:ml-0 
+        lg:mr-28;
+
+        .image {
+          @apply w-full bg-cover bg-center min-h-72 transition-all duration-200 relative;
+
+          &::before {
+            @apply absolute content-[""] w-full h-full bg-blue-dark transition-all duration-200 opacity-30;
+          }
+
+          &.active {
+            .image-text {
+              @apply opacity-95;
+            }
+            &::before {
+              @apply opacity-0;
+            }
+          }
+
+          &:hover {
+            @extend .active;
+          }
+          .image-text {
+            @apply absolute 
+            transition-all duration-200
+            top-3/4
+            left-1/2
+            -translate-x-1/2
+            md:-translate-x-0
+
+            md:-left-10 
+            rounded-lg 
+            font-bold font-albert-sans uppercase
+            
+            px-1 py-2
+            md:px-2 md:py-4
+            bg-white text-black
+            text-xs md:text-sm
+            opacity-0;
+
+            span {
+              @apply text-blue-light pl-1;
+            }
+          }
+        }
+
+        .svg-dots {
+          @apply absolute
+          scale-50 md:scale-100
+          -translate-x-2.5
+          md:translate-x-0
+          top-1/2 left-full -translate-y-1/2 h-1/2 w-fit;
+        }
+      }
     }
   }
 }

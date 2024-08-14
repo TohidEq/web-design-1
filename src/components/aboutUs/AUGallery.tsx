@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import Link from "next/link";
+import React, { useState } from "react";
 
 type Props = {};
 
@@ -10,6 +12,7 @@ function AUGallery({}: Props) {
       viewBox="0 0 70 470"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className="svg-dots"
     >
       <circle
         cx="5"
@@ -686,6 +689,8 @@ function AUGallery({}: Props) {
     </svg>
   );
 
+  const [difaultHover, setDifaultHover] = useState("active");
+
   return (
     <div className="about-us-gallery">
       <div className="texts">
@@ -705,32 +710,42 @@ function AUGallery({}: Props) {
         <p className="text">
           <b>With 💖 from Amsterdam, Netherlands.</b>
         </p>
+        <Link href="#" className="link">
+          read more about us
+        </Link>
       </div>
-      <div className="images">
-        <div className={`image bg-[url(/images/about-us/about-us-1.jpg)]`}>
+      <div
+        className="images"
+        onMouseEnter={() => setDifaultHover("")}
+        onMouseLeave={() => setDifaultHover("active")}
+      >
+        <div
+          className={`image ${difaultHover} bg-[url(/images/about-us/about-us-1.jpg)]`}
+        >
           <div className="image-text">
-            Martin Jack
+            Martin Jack,
             <span>ceo</span>
           </div>
         </div>
         <div className={`image bg-[url(/images/about-us/about-us-2.jpg)]`}>
           <div className="image-text">
-            Kokab Jafari
+            Kokab Jafari,
             <span>Farm</span>
           </div>
         </div>
         <div className={`image bg-[url(/images/about-us/about-us-3.jpg)]`}>
           <div className="image-text">
-            Lisa Lisazade
+            Lisa Lisazade,
             <span>Design</span>
           </div>
         </div>
         <div className={`image bg-[url(/images/about-us/about-us-4.jpg)]`}>
           <div className="image-text">
-            Happy Mappy
+            Happy Mappy,
             <span>smile</span>
           </div>
         </div>
+        {svgDotsHorizontal}
       </div>
     </div>
   );

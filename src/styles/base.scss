@@ -51,11 +51,13 @@ body {
 .text-3-sizing {
   @apply text-xs md:text-sm;
 }
+.text-4-sizing {
+  @apply text-[10px] md:text-[12px];
+}
 
 .btn-1 {
   @apply bg-blue-light text-white transition-all duration-150 font-bold 
   text-center rounded-full relative
-  text-xs sm:text-sm md:text-base  
   drop-shadow-glow-btn-1
   py-2 md:py-4;
 
