@@ -573,22 +573,6 @@ video {
   resize: both;
 }
 
-.bg-\[url\(\/images\/about-us\/about-us-1\.jpg\)\]{
-  background-image: url(/images/about-us/about-us-1.jpg);
-}
-
-.bg-\[url\(\/images\/about-us\/about-us-2\.jpg\)\]{
-  background-image: url(/images/about-us/about-us-2.jpg);
-}
-
-.bg-\[url\(\/images\/about-us\/about-us-3\.jpg\)\]{
-  background-image: url(/images/about-us/about-us-3.jpg);
-}
-
-.bg-\[url\(\/images\/about-us\/about-us-4\.jpg\)\]{
-  background-image: url(/images/about-us/about-us-4.jpg);
-}
-
 .bg-pick-your-trip{
   background-image: url('/images/pick-your-trip/pick-your-trip.jpg');
 }
@@ -810,6 +794,35 @@ body {
 @media (min-width: 768px){
   .text-4-sizing{
     font-size: 12px;
+  }
+}
+
+.head-2{
+  text-align: center;
+  .title{
+    font-family: Libre Caslon Text, serif;
+  }
+  .title{
+    font-weight: 700;
+  }
+  .title {
+    @extend .title-2-sizing;
+  }
+  p{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  p{
+    font-family: Albert Sans, sans-serif;
+  }
+  p{
+    font-weight: 700;
+  }
+  p{
+    text-transform: uppercase;
+  }
+  p {
+    @extend .text-2-sizing;
   }
 }
 
@@ -3282,6 +3295,11 @@ background: linear-gradient(
         .text{
           padding-bottom: 1.25rem;
         }
+        @media (min-width: 1024px){
+          .text{
+            max-width: 24rem;
+          }
+        }
         .text {
           @extend .text-2-sizing;
         }
@@ -3532,11 +3550,15 @@ background: linear-gradient(
           width: fit-content;
         }
         .svg-dots{
-          --tw-translate-x: -0.625rem;
+          --tw-translate-x: -0.5rem;
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
         }
         .svg-dots{
           --tw-translate-y: -50%;
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+        .svg-dots{
+          --tw-rotate: 180deg;
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
         }
         .svg-dots{
@@ -3546,7 +3568,7 @@ background: linear-gradient(
         }
         @media (min-width: 768px){
           .svg-dots{
-            --tw-translate-x: 0px;
+            --tw-translate-x: 0.25rem;
             transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           }
         }
@@ -3555,6 +3577,292 @@ background: linear-gradient(
             --tw-scale-x: 1;
             --tw-scale-y: 1;
             transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          }
+        }
+      }
+    }
+  }
+  .c-u-soon{
+    position: relative;
+  }
+  .c-u-soon{
+    z-index: 20;
+  }
+  .c-u-soon{
+    --tw-bg-opacity: 1;
+    background-color: rgb(1 22 39 / var(--tw-bg-opacity));
+  }
+  .c-u-soon{
+    padding-bottom: 6rem;
+  }
+  .c-u-soon {
+    .c-u-soon-container{
+      position: relative;
+    }
+    .c-u-soon-container{
+      padding-top: 2.5rem;
+    }
+    .c-u-soon-container{
+      padding-bottom: 6rem;
+    }
+    .c-u-soon-container {
+      @extend .head-2;
+      &::before{
+        position: absolute;
+      }
+      &::before{
+        left: 50%;
+      }
+      &::before{
+        top: 100%;
+      }
+      &::before{
+        height: 5rem;
+      }
+      &::before{
+        width: 2px;
+      }
+      &::before{
+        --tw-translate-x: -50%;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      }
+      &::before{
+        --tw-translate-y: -50%;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      }
+      &::before{
+        border-radius: 0.75rem;
+      }
+      &::before{
+        background-image: linear-gradient(to top, var(--tw-gradient-stops));
+      }
+      &::before{
+        --tw-gradient-from: #41EAD4 var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(65 234 212 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+      }
+      &::before{
+        --tw-gradient-to: #00C9E0 var(--tw-gradient-to-position);
+      }
+      &::before{
+        --tw-content: "";
+        content: var(--tw-content);
+      }
+    }
+  }
+}
+
+.peoples-thoughts{
+  background-image: linear-gradient(180deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%);
+  padding-top: 9rem;
+  .peoples-thoughts-container{
+    width: 100%;
+  }
+  @media (min-width: 640px){
+    .peoples-thoughts-container{
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 768px){
+    .peoples-thoughts-container{
+      max-width: 768px;
+    }
+  }
+  @media (min-width: 1024px){
+    .peoples-thoughts-container{
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 1280px){
+    .peoples-thoughts-container{
+      max-width: 1280px;
+    }
+  }
+  @media (min-width: 1536px){
+    .peoples-thoughts-container{
+      max-width: 1536px;
+    }
+  }
+  .peoples-thoughts-container{
+    position: relative;
+  }
+  .peoples-thoughts-container{
+    z-index: 10;
+  }
+  .peoples-thoughts-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .peoples-thoughts-container{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  .peoples-thoughts-container{
+    --tw-bg-opacity: 1;
+    background-color: rgb(1 22 39 / var(--tw-bg-opacity));
+  }
+  .peoples-thoughts-container{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .peoples-thoughts-container {
+    &::before{
+      position: absolute;
+    }
+    &::before{
+      left: 50%;
+    }
+    &::before{
+      bottom: 100%;
+    }
+    &::before{
+      height: 5rem;
+    }
+    &::before{
+      width: 2px;
+    }
+    &::before{
+      --tw-translate-x: -50%;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+    &::before{
+      --tw-translate-y: 50%;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+    &::before{
+      border-radius: 0.75rem;
+    }
+    &::before{
+      background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+    }
+    &::before{
+      --tw-gradient-from: #41EAD4 var(--tw-gradient-from-position);
+      --tw-gradient-to: rgb(65 234 212 / 0) var(--tw-gradient-to-position);
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+    &::before{
+      --tw-gradient-to: #00C9E0 var(--tw-gradient-to-position);
+    }
+    &::before{
+      --tw-content: "";
+      content: var(--tw-content);
+    }
+    .peoples-thoughts-head {
+      @extend .head-2;
+    }
+    .peoples-thoughts-cards{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .peoples-thoughts-cards{
+      display: grid;
+    }
+    .peoples-thoughts-cards{
+      max-width: 64rem;
+    }
+    .peoples-thoughts-cards{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .peoples-thoughts-cards{
+      place-content: center;
+    }
+    .peoples-thoughts-cards{
+      justify-items: center;
+    }
+    .peoples-thoughts-cards{
+      gap: 2rem;
+    }
+    .peoples-thoughts-cards {
+      .pt-card{
+        border-radius: 0.5rem;
+      }
+      .pt-card{
+        --tw-bg-opacity: 1;
+        background-color: rgb(2 34 59 / var(--tw-bg-opacity));
+      }
+      .pt-card{
+        padding: 5rem;
+      }
+      .pt-card{
+        padding-left: 6rem;
+      }
+      .pt-card {
+        .content{
+          position: relative;
+        }
+        .content {
+          .svg-quote{
+            position: absolute;
+          }
+          .svg-quote{
+            top: 0px;
+          }
+          .svg-quote{
+            right: 100%;
+          }
+          .svg-quote{
+            height: 2rem;
+          }
+          .svg-quote{
+            width: 2rem;
+          }
+          .svg-quote{
+            --tw-translate-x: -1.25rem;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          }
+          .comment {
+            p{
+              padding-top: 0.75rem;
+              padding-bottom: 0.75rem;
+            }
+            p {
+              @extend .text-2-sizing;
+            }
+          }
+          .user{
+            display: flex;
+          }
+          .user{
+            align-items: center;
+          }
+          .user{
+            padding-top: 2.5rem;
+          }
+          .user {
+            .user-image{
+              margin-right: 1rem;
+            }
+            .user-image{
+              height: 5rem;
+            }
+            .user-image{
+              width: 5rem;
+            }
+            .user-image{
+              border-radius: 0.5rem;
+            }
+            .user-image{
+              background-size: cover;
+            }
+            .user-image{
+              background-position: center;
+            }
+            .user-info > div{
+              padding-top: 0.5rem;
+              padding-bottom: 0.5rem;
+            }
+            .user-info > div{
+              font-weight: 700;
+            }
+            .user-info > div{
+              text-transform: uppercase;
+            }
+            .user-info > div{
+              letter-spacing: 0.1em;
+            }
+            .user-info > div {
+              @extend .text-3-sizing;
+            }
           }
         }
       }

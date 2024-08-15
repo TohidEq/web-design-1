@@ -30,8 +30,10 @@ function AboutUs({}: Props) {
         <PeoplesThoughts />
       </div>
       <div className="c-u-soon">
-        <h2 className="title">See You Soon!</h2>
-        <p>We hope to meet each other very soon.</p>
+        <div className="c-u-soon-container">
+          <h2 className="title">See You Soon!</h2>
+          <p>We hope to meet each other very soon.</p>
+        </div>
       </div>
     </div>
   );

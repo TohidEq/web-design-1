@@ -66,7 +66,7 @@
           @extend .title-2-sizing;
         }
         .text {
-          @apply pb-5 max-w-80;
+          @apply pb-5 max-w-80 lg:max-w-96;
           @extend .text-2-sizing;
         }
         .link {
@@ -132,10 +132,28 @@
         .svg-dots {
           @apply absolute
           scale-50 md:scale-100
-          -translate-x-2.5
-          md:translate-x-0
+          -translate-x-2
+          md:translate-x-1
+          rotate-180
           top-1/2 left-full -translate-y-1/2 h-1/2 w-fit;
         }
+      }
+    }
+  }
+
+  .c-u-soon {
+    @apply bg-blue-dark relative pb-24 z-20;
+    .c-u-soon-container {
+      @apply relative pt-10 pb-24;
+      @extend .head-2;
+
+      &::before {
+        @apply content-[""] absolute  rounded-xl
+        bg-gradient-to-t from-green-light to-blue-light
+        left-1/2 top-full 
+        -translate-x-1/2
+        -translate-y-1/2
+      w-[2px] h-20;
       }
     }
   }

@@ -55,6 +55,18 @@ body {
   @apply text-[10px] md:text-[12px];
 }
 
+.head-2 {
+  @apply text-center;
+  .title {
+    @apply font-libre-caslon font-bold;
+    @extend .title-2-sizing;
+  }
+  p {
+    @apply uppercase font-albert-sans font-bold py-10;
+    @extend .text-2-sizing;
+  }
+}
+
 .btn-1 {
   @apply bg-blue-light text-white transition-all duration-150 font-bold 
   text-center rounded-full relative

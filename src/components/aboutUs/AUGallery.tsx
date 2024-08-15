@@ -720,26 +720,36 @@ function AUGallery({}: Props) {
         onMouseLeave={() => setDifaultHover("active")}
       >
         <div
-          className={`image ${difaultHover} bg-[url(/images/about-us/about-us-1.jpg)]`}
+          className={`image ${difaultHover}`}
+          style={{ backgroundImage: `url(/images/about-us/about-us-1.jpg)` }}
         >
           <div className="image-text">
             Martin Jack,
             <span>ceo</span>
           </div>
         </div>
-        <div className={`image bg-[url(/images/about-us/about-us-2.jpg)]`}>
+        <div
+          className={`image `}
+          style={{ backgroundImage: `url(/images/about-us/about-us-2.jpg)` }}
+        >
           <div className="image-text">
             Kokab Jafari,
             <span>Farm</span>
           </div>
         </div>
-        <div className={`image bg-[url(/images/about-us/about-us-3.jpg)]`}>
+        <div
+          className={`image `}
+          style={{ backgroundImage: `url(/images/about-us/about-us-3.jpg)` }}
+        >
           <div className="image-text">
             Lisa Lisazade,
             <span>Design</span>
           </div>
         </div>
-        <div className={`image bg-[url(/images/about-us/about-us-4.jpg)]`}>
+        <div
+          className={`image `}
+          style={{ backgroundImage: `url(/images/about-us/about-us-4.jpg)` }}
+        >
           <div className="image-text">
             Happy Mappy,
             <span>smile</span>

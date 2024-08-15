@@ -12,6 +12,7 @@ const config: Config = {
         white: "#ffffff",
         light: "#929AAB",
         dark: "#474A56",
+        blue: "#02223B",
         "blue-light": "#00C9E0",
         "green-light": "#41EAD4",
         purple: "#BE41EA",

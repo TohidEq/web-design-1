@@ -1,0 +1,59 @@
+.peoples-thoughts {
+  @apply bg-gradient-dark-bottom pt-36;
+  .peoples-thoughts-container {
+    @apply container mx-auto bg-blue-dark relative z-10 
+    rounded-t-lg
+    py-20;
+
+    &::before {
+      @apply content-[""] absolute  rounded-xl
+      bg-gradient-to-b from-green-light to-blue-light
+      left-1/2 bottom-full 
+      -translate-x-1/2
+      translate-y-1/2
+      w-[2px] h-20;
+    }
+
+    .peoples-thoughts-head {
+      @extend .head-2;
+    }
+
+    .peoples-thoughts-cards {
+      @apply max-w-5xl mx-auto grid grid-cols-2 gap-8 justify-items-center place-content-center;
+
+      .pt-card {
+        @apply bg-blue
+        p-20 rounded-lg
+        pl-24;
+
+        .content {
+          @apply relative;
+
+          .svg-quote {
+            @apply w-8 h-8 absolute 
+            top-0
+            right-full -translate-x-5;
+          }
+
+          .comment {
+            p {
+              @apply py-3;
+              @extend .text-2-sizing;
+            }
+          }
+
+          .user {
+            @apply flex pt-10 items-center;
+            .user-image {
+              @apply h-20 w-20 bg-cover bg-center mr-4 rounded-lg;
+            }
+            .user-info > div {
+              @apply uppercase py-2 font-bold tracking-widest;
+              @extend .text-3-sizing;
+            }
+          }
+        }
+      }
+    }
+  }
+}
