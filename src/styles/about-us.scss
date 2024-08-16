@@ -95,7 +95,7 @@
 
           &.active {
             .image-text {
-              @apply opacity-95;
+              @apply opacity-95 scale-100;
             }
             &::before {
               @apply opacity-0;
@@ -106,8 +106,8 @@
             @extend .active;
           }
           .image-text {
-            @apply absolute 
-            transition-all duration-200
+            @apply absolute
+            transition-all duration-300 scale-75
             top-3/4
             left-1/2
             -translate-x-1/2

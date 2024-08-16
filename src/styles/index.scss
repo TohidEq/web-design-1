@@ -787,6 +787,23 @@ body {
   }
 }
 
+.text-3-sizing-1{
+  font-size: 10px;
+}
+
+@media (min-width: 768px){
+  .text-3-sizing-1{
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px){
+  .text-3-sizing-1{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
 .text-4-sizing{
   font-size: 10px;
 }
@@ -3429,6 +3446,11 @@ background: linear-gradient(
           }
           &.active {
             .image-text{
+              --tw-scale-x: 1;
+              --tw-scale-y: 1;
+              transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            }
+            .image-text{
               opacity: 0.95;
             }
             &::before{
@@ -3449,6 +3471,11 @@ background: linear-gradient(
           }
           .image-text{
             --tw-translate-x: -50%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          }
+          .image-text{
+            --tw-scale-x: .75;
+            --tw-scale-y: .75;
             transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           }
           .image-text{
@@ -3492,7 +3519,7 @@ background: linear-gradient(
             transition-duration: 150ms;
           }
           .image-text{
-            transition-duration: 200ms;
+            transition-duration: 300ms;
           }
           @media (min-width: 768px){
             .image-text{
@@ -3654,6 +3681,8 @@ background: linear-gradient(
 
 .peoples-thoughts{
   background-image: linear-gradient(180deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, #011627 100%);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   padding-top: 9rem;
   .peoples-thoughts-container{
     width: 100%;
@@ -3761,7 +3790,7 @@ background: linear-gradient(
       max-width: 64rem;
     }
     .peoples-thoughts-cards{
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(1, minmax(0, 1fr));
     }
     .peoples-thoughts-cards{
       place-content: center;
@@ -3770,7 +3799,32 @@ background: linear-gradient(
       justify-items: center;
     }
     .peoples-thoughts-cards{
-      gap: 2rem;
+      row-gap: 0.75rem;
+    }
+    .peoples-thoughts-cards{
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    @media (min-width: 640px){
+      .peoples-thoughts-cards{
+        -moz-column-gap: 1rem;
+             column-gap: 1rem;
+      }
+    }
+    @media (min-width: 640px){
+      .peoples-thoughts-cards{
+        row-gap: 0.75rem;
+      }
+    }
+    @media (min-width: 768px){
+      .peoples-thoughts-cards{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (min-width: 768px){
+      .peoples-thoughts-cards{
+        gap: 2rem;
+      }
     }
     .peoples-thoughts-cards {
       .pt-card{
@@ -3781,14 +3835,68 @@ background: linear-gradient(
         background-color: rgb(2 34 59 / var(--tw-bg-opacity));
       }
       .pt-card{
-        padding: 5rem;
+        padding: 3.5rem;
       }
       .pt-card{
-        padding-left: 6rem;
+        padding-left: 4rem;
+      }
+      .pt-card{
+        padding-right: 3.5rem;
+      }
+      .pt-card{
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .pt-card{
+        transition-duration: 200ms;
+      }
+      @media (min-width: 768px){
+        .pt-card{
+          max-width: 32rem;
+        }
+      }
+      @media (min-width: 1024px){
+        .pt-card{
+          padding: 5rem;
+        }
+      }
+      @media (min-width: 1024px){
+        .pt-card{
+          padding-left: 6rem;
+        }
+      }
+      @media (min-width: 1024px){
+        .pt-card{
+          padding-right: 4rem;
+        }
       }
       .pt-card {
+        &:hover{
+          --tw-scale-x: 98%;
+          --tw-scale-y: 98%;
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+        &:hover{
+          background-color: rgb(0 201 224 / 0.1);
+        }
+        &:hover {
+          .content{
+            --tw-scale-x: 102%;
+            --tw-scale-y: 102%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          }
+        }
         .content{
           position: relative;
+        }
+        .content{
+          transition-property: all;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 150ms;
+        }
+        .content{
+          transition-duration: 500ms;
         }
         .content {
           .svg-quote{
@@ -3801,14 +3909,40 @@ background: linear-gradient(
             right: 100%;
           }
           .svg-quote{
-            height: 2rem;
+            height: 1.25rem;
           }
           .svg-quote{
-            width: 2rem;
+            width: 1.25rem;
           }
           .svg-quote{
-            --tw-translate-x: -1.25rem;
+            --tw-translate-x: -1rem;
             transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          }
+          @media (min-width: 768px){
+            .svg-quote{
+              height: 1.5rem;
+            }
+          }
+          @media (min-width: 768px){
+            .svg-quote{
+              width: 1.5rem;
+            }
+          }
+          @media (min-width: 1024px){
+            .svg-quote{
+              height: 2rem;
+            }
+          }
+          @media (min-width: 1024px){
+            .svg-quote{
+              width: 2rem;
+            }
+          }
+          @media (min-width: 1024px){
+            .svg-quote{
+              --tw-translate-x: -1.25rem;
+              transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            }
           }
           .comment {
             p{
@@ -3830,13 +3964,10 @@ background: linear-gradient(
           }
           .user {
             .user-image{
-              margin-right: 1rem;
+              min-height: 68px;
             }
             .user-image{
-              height: 5rem;
-            }
-            .user-image{
-              width: 5rem;
+              min-width: 68px;
             }
             .user-image{
               border-radius: 0.5rem;
@@ -3847,21 +3978,47 @@ background: linear-gradient(
             .user-image{
               background-position: center;
             }
-            .user-info > div{
-              padding-top: 0.5rem;
-              padding-bottom: 0.5rem;
+            @media (min-width: 1024px){
+              .user-image{
+                height: 5rem;
+              }
             }
-            .user-info > div{
-              font-weight: 700;
+            @media (min-width: 1024px){
+              .user-image{
+                width: 5rem;
+              }
             }
-            .user-info > div{
-              text-transform: uppercase;
-            }
-            .user-info > div{
-              letter-spacing: 0.1em;
-            }
-            .user-info > div {
-              @extend .text-3-sizing;
+            .user-info {
+              div{
+                padding-top: 0.25rem;
+                padding-bottom: 0.25rem;
+              }
+              div{
+                padding-left: 0.75rem;
+              }
+              div{
+                font-weight: 700;
+              }
+              div{
+                text-transform: uppercase;
+              }
+              div{
+                letter-spacing: 0.1em;
+              }
+              @media (min-width: 1024px){
+                div{
+                  padding-top: 0.5rem;
+                  padding-bottom: 0.5rem;
+                }
+              }
+              @media (min-width: 1024px){
+                div{
+                  padding-left: 1rem;
+                }
+              }
+              div {
+                @extend .text-3-sizing-1;
+              }
             }
           }
         }

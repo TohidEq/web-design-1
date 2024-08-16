@@ -51,6 +51,9 @@ body {
 .text-3-sizing {
   @apply text-xs md:text-sm;
 }
+.text-3-sizing-1 {
+  @apply text-[10px] md:text-[12px] lg:text-sm;
+}
 .text-4-sizing {
   @apply text-[10px] md:text-[12px];
 }

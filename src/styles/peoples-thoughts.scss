@@ -1,5 +1,5 @@
 .peoples-thoughts {
-  @apply bg-gradient-dark-bottom pt-36;
+  @apply bg-gradient-dark-bottom pt-36 px-2;
   .peoples-thoughts-container {
     @apply container mx-auto bg-blue-dark relative z-10 
     rounded-t-lg
@@ -19,20 +19,42 @@
     }
 
     .peoples-thoughts-cards {
-      @apply max-w-5xl mx-auto grid grid-cols-2 gap-8 justify-items-center place-content-center;
+      @apply max-w-5xl mx-auto grid justify-items-center place-content-center
+      grid-cols-1
+      md:grid-cols-2 
+      px-3
+      
+      gap-y-3
+      sm:gap-x-4 sm:gap-y-3
+      md:gap-8;
 
       .pt-card {
         @apply bg-blue
-        p-20 rounded-lg
-        pl-24;
+        rounded-lg
+        transition-all duration-200
+        p-14 pl-16
+        lg:p-20 lg:pl-24
+        pr-14 lg:pr-16
+        md:max-w-lg;
+
+        &:hover {
+          @apply bg-blue-light/10  scale-[98%];
+          .content {
+            @apply scale-[102%];
+          }
+        }
 
         .content {
-          @apply relative;
+          @apply relative transition-all duration-500;
 
           .svg-quote {
-            @apply w-8 h-8 absolute 
+            @apply absolute 
             top-0
-            right-full -translate-x-5;
+            right-full -translate-x-4 lg:-translate-x-5
+            w-5 h-5
+            md:w-6 md:h-6
+            
+            lg:w-8 lg:h-8;
           }
 
           .comment {
@@ -45,11 +67,19 @@
           .user {
             @apply flex pt-10 items-center;
             .user-image {
-              @apply h-20 w-20 bg-cover bg-center mr-4 rounded-lg;
+              @apply bg-cover bg-center rounded-lg
+              min-h-[68px] min-w-[68px] 
+              lg:h-20 lg:w-20;
             }
-            .user-info > div {
-              @apply uppercase py-2 font-bold tracking-widest;
-              @extend .text-3-sizing;
+            .user-info {
+              div {
+                @apply uppercase font-bold tracking-widest
+                pl-3
+                lg:pl-4
+                py-1
+                lg:py-2;
+                @extend .text-3-sizing-1;
+              }
             }
           }
         }
