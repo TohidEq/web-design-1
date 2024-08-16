@@ -1,0 +1,73 @@
+.footer {
+  @apply font-albert-sans text-white bg-blue-dark
+  pb-16 md:pb-28 pt-10;
+
+  .footer-links,
+  .footer-texts {
+    @apply container mx-auto;
+  }
+
+  .footer-links {
+    @apply max-w-5xl grid px-2
+    gap-y-7
+
+    grid-cols-2
+    md:grid-cols-3
+    lg:grid-cols-5;
+
+    .links {
+      .links-title {
+        @apply font-bold uppercase relative
+        pb-5;
+        @extend .title-5-sizing;
+
+        &::after {
+          @apply content-[""] absolute w-[50px] h-px bg-green-light
+          rounded-l-2xl
+          bottom-0.5 left-0 -translate-y-[3px];
+        }
+        .svg-title {
+          @apply absolute
+          -bottom-[5px] -translate-y-full left-12 
+          text-green-light
+          w-[7px] h-[7px];
+        }
+      }
+      ul {
+        @apply mt-5;
+        &.icons-links {
+          @apply flex;
+          .link {
+            @apply pr-3;
+            a {
+              svg {
+                @apply text-green-light
+                w-5 h-5
+                md:w-6 md:h-6;
+              }
+            }
+          }
+        }
+        .link {
+          @apply mb-5;
+          a {
+            @apply block w-full truncate;
+          }
+        }
+      }
+    }
+  }
+  .footer-texts {
+    @apply text-center pt-16 md:pt-24;
+    .copyright {
+      @extend .text-1-sizing;
+    }
+    .logo {
+      @apply font-libre-caslon font-bold pt-7;
+      @extend .title-3-sizing;
+      span {
+        @apply text-green-light;
+      }
+    }
+  }
+}

@@ -15,7 +15,10 @@ function Footer({}: Props) {
     <div className="footer">
       <div className="footer-links">
         <div className="links">
-          <h2 className="links-title">about</h2>
+          <h2 className="links-title">
+            about
+            <CgShapeRhombus className="svg-title" />
+          </h2>
           <ul>
             <li className="link">
               <Link href="#">Our Mission</Link>
@@ -29,7 +32,10 @@ function Footer({}: Props) {
           </ul>
         </div>
         <div className="links">
-          <h2 className="links-title">faq</h2>
+          <h2 className="links-title">
+            faq
+            <CgShapeRhombus className="svg-title" />
+          </h2>
           <ul>
             <li className="link">
               <Link href="#">Rules</Link>
@@ -46,7 +52,10 @@ function Footer({}: Props) {
           </ul>
         </div>
         <div className="links">
-          <h2 className="links-title">events</h2>
+          <h2 className="links-title">
+            events
+            <CgShapeRhombus className="svg-title" />
+          </h2>
           <ul>
             <li className="link">
               <Link href="#">Star Gazing</Link>
@@ -63,7 +72,10 @@ function Footer({}: Props) {
           </ul>
         </div>
         <div className="links">
-          <h2 className="links-title">contant us</h2>
+          <h2 className="links-title">
+            contant us
+            <CgShapeRhombus className="svg-title" />
+          </h2>
           <ul>
             <li className="link">
               <Link href="#">hello@example.com</Link>
@@ -77,7 +89,10 @@ function Footer({}: Props) {
           </ul>
         </div>
         <div className="links">
-          <h2 className="links-title">follow us</h2>
+          <h2 className="links-title">
+            follow us
+            <CgShapeRhombus className="svg-title" />
+          </h2>
           <ul className="icons-links">
             <li className="link">
               <Link href="#">
