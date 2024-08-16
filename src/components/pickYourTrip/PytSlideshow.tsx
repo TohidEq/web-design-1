@@ -183,7 +183,10 @@ function PytSlideshow({ items }: Props) {
       <Fade {...properties}>
         {items.map((item, index) => (
           <div className="each-slide-effect" key={index}>
-            <div className={`${item.image} slide-image`}>
+            <div
+              className={`slide-image`}
+              style={{ backgroundImage: `url(${item.image})` }}
+            >
               <div className="title">
                 {item.title}
                 <span className="counter">0{index + 1}.</span>

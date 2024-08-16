@@ -2112,12 +2112,20 @@ background: linear-gradient(
       padding-right: 0.25rem;
     }
     .pyt-tab-list{
+      padding-bottom: 3rem;
+    }
+    .pyt-tab-list{
       text-align: center;
     }
     @media (min-width: 768px){
       .pyt-tab-list{
         padding-left: 7rem;
         padding-right: 7rem;
+      }
+    }
+    @media (min-width: 1024px){
+      .pyt-tab-list{
+        padding-bottom: 9rem;
       }
     }
     .pyt-tab-list {
@@ -2250,14 +2258,6 @@ background: linear-gradient(
     }
     .pyt-tab-panel{
       flex-wrap: wrap;
-    }
-    .pyt-tab-panel{
-      padding-top: 3rem;
-    }
-    @media (min-width: 1024px){
-      .pyt-tab-panel{
-        padding-top: 9rem;
-      }
     }
     .pyt-tab-panel {
       .pyt-slideshow{
@@ -2647,6 +2647,9 @@ background: linear-gradient(
         }
         .title{
           font-weight: 700;
+        }
+        .title{
+          line-height: 1.25;
         }
         p{
           max-width: 510px;

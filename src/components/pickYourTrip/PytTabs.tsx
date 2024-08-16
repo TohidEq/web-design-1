@@ -12,8 +12,24 @@ type Props = {};
 
 function PytTabs({}: Props) {
   const slideshowItems: SlideshowItem[] = [
-    { title: "GRAND DUNES LANDSCAPE 1", image: "bg-pick-your-trip" },
-    { title: "GRAND DUNES LANDSCAPE 2", image: "bg-pick-your-trip" },
+    {
+      title: "GRAND DUNES LANDSCAPE 1",
+      image: "/images/pick-your-trip/pick-your-trip.jpg",
+    },
+    {
+      title: "GRAND DUNES LANDSCAPE 2",
+      image: "/images/pick-your-trip/pick-your-trip-1.jpg",
+    },
+  ];
+  const slideshowItems2: SlideshowItem[] = [
+    {
+      title: "NEW DUNES LANDSCAPE 1",
+      image: "/images/pick-your-trip/pick-your-trip-2.jpg",
+    },
+    {
+      title: "NEW DUNES LANDSCAPE 2",
+      image: "/images/pick-your-trip/pick-your-trip-3.jpg",
+    },
   ];
 
   return (
@@ -67,14 +83,130 @@ function PytTabs({}: Props) {
         </div>
       </TabPanel>
 
-      <TabPanel>
-        <h2>Any content 2</h2>
+      <TabPanel className="pyt-tab-panel">
+        <div className="pyt-slideshow">
+          <PytSlideshow items={slideshowItems2} />
+        </div>
+        <div className="pyt-tab-panel-content">
+          <h3 className="title">Spooky Tiems</h3>
+          <p className="text">
+            Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices
+            curabitur. Erat id fringilla arcu condimentum fames.
+          </p>
+          <p className="extra">
+            Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum
+            rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra
+            lacus, dignissim pharetra ipsum blandit. Feugiat quis quam
+            consectetur lectus id quis tortor vel, mattis.
+          </p>
+          <Link className="link" href="#">
+            SEE OUR LATEST OFFER
+          </Link>
+          <div className="links">
+            <ul>
+              <span>share it:</span>
+              <li>
+                <Link href="">
+                  <FiTwitter />
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <FaInstagram />
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <FaFacebookF />
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </TabPanel>
-      <TabPanel>
-        <h2>Any content 3</h2>
+
+      <TabPanel className="pyt-tab-panel">
+        <div className="pyt-slideshow">
+          <PytSlideshow items={slideshowItems} />
+        </div>
+        <div className="pyt-tab-panel-content">
+          <h3 className="title">Desert Madness</h3>
+          <p className="text">
+            Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices
+            curabitur. Erat id fringilla arcu condimentum fames.
+          </p>
+          <p className="extra">
+            Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum
+            rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra
+            lacus, dignissim pharetra ipsum blandit. Feugiat quis quam
+            consectetur lectus id quis tortor vel, mattis.
+          </p>
+          <Link className="link" href="#">
+            SEE OUR LATEST OFFER
+          </Link>
+          <div className="links">
+            <ul>
+              <span>share it:</span>
+              <li>
+                <Link href="">
+                  <FiTwitter />
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <FaInstagram />
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <FaFacebookF />
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </TabPanel>
-      <TabPanel>
-        <h2>Any content 4</h2>
+
+      <TabPanel className="pyt-tab-panel">
+        <div className="pyt-slideshow">
+          <PytSlideshow items={slideshowItems2} />
+        </div>
+        <div className="pyt-tab-panel-content">
+          <h3 className="title">Out in the wild</h3>
+          <p className="text">
+            Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices
+            curabitur. Erat id fringilla arcu condimentum fames.
+          </p>
+          <p className="extra">
+            Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum
+            rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra
+            lacus, dignissim pharetra ipsum blandit. Feugiat quis quam
+            consectetur lectus id quis tortor vel, mattis.
+          </p>
+          <Link className="link" href="#">
+            SEE OUR LATEST OFFER
+          </Link>
+          <div className="links">
+            <ul>
+              <span>share it:</span>
+              <li>
+                <Link href="">
+                  <FiTwitter />
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <FaInstagram />
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  <FaFacebookF />
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
       </TabPanel>
     </Tabs>
   );
