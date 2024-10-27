@@ -3248,6 +3248,12 @@ background: linear-gradient(
       }
     }
     .about-us-gallery{
+      position: relative;
+    }
+    .about-us-gallery{
+      z-index: 20;
+    }
+    .about-us-gallery{
       margin-left: auto;
       margin-right: auto;
     }

@@ -7,7 +7,7 @@
     background-blend-mode: hard-light;
 
     .about-us-bg {
-      @apply absolute w-full h-full bg-transparent bg-cover 
+      @apply absolute w-full h-full bg-transparent bg-cover
       top-0 left-0;
       .item-1 {
         &::after {
@@ -20,7 +20,7 @@
         &::before {
           @apply content-[""]
           absolute w-1/3 h-1/4
-          bg-purple opacity-30 
+          bg-purple opacity-30
           top-0 left-0 translate-x-44 translate-y-40
           blur-[90px] sm:blur-[140px] md:blur-[200px];
         }
@@ -36,7 +36,7 @@
         &::before {
           @apply content-[""]
           absolute w-1/3 h-1/4
-          bg-purple opacity-30 
+          bg-purple opacity-30
           top-[90vh] right-0 -translate-x-44 -translate-y-40
           blur-[90px] sm:blur-[140px] md:blur-[200px];
         }
@@ -51,11 +51,11 @@
     }
 
     .about-us-gallery {
-      @apply container mx-auto
+      @apply container mx-auto relative z-20
       grid grid-cols-8 gap-x-10 gap-y-9 md:gap-y-16;
 
       .texts {
-        @apply col-span-full lg:col-span-3 font-albert-sans 
+        @apply col-span-full lg:col-span-3 font-albert-sans
         px-2
         md:pl-28
         lg:pr-0
@@ -77,7 +77,7 @@
       }
 
       .images {
-        @apply col-span-full lg:col-span-5 
+        @apply col-span-full lg:col-span-5
         relative grid grid-cols-2
         ml-2
         mr-7
@@ -113,10 +113,10 @@
             -translate-x-1/2
             md:-translate-x-0
 
-            md:-left-10 
-            rounded-lg 
+            md:-left-10
+            rounded-lg
             font-bold font-albert-sans uppercase
-            
+
             px-1 py-2
             md:px-2 md:py-4
             bg-white text-black
@@ -150,7 +150,7 @@
       &::before {
         @apply content-[""] absolute  rounded-xl
         bg-gradient-to-t from-green-light to-blue-light
-        left-1/2 top-full 
+        left-1/2 top-full
         -translate-x-1/2
         -translate-y-1/2
       w-[2px] h-20;
