@@ -2,7 +2,7 @@
 
 A travel-themed landing page showcasing unique destinations and adventure experiences.
 
-**[Live Demo](https://web-design-1-night-trips-teq.vercel.app/)** · [Figma Design](https://www.figma.com/design/qinMy6AE08VosT4d52uHxH/Landing-page---%D0%9F%D1%83%D1%82%D0%B5%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D1%8F?node-id=0-1&p=f)
+**[Live Demo](https://web-design-1-night-trips-teq.vercel.app/)** · [Figma Design](https://www.figma.com/design/qinMy6AE08VosT4d52uHxH/Landing-page---%D0%9F%D1%83%D1%82%D0%B5%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D1%8F?m=auto&t=EsUWgZ0VyR7MuTEh-6)
 
 ## Preview
 
