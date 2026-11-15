@@ -9,6 +9,9 @@
     "lint": "next lint",
     "build-css": "tailwindcss --postcss-scss -i ./src/styles/tailwind.scss -o ./src/styles/index.scss --watch"
   },
+  "engines": {
+    "node": "26.x"
+  },
   "dependencies": {
     "next": "14.2.5",
     "react": "^18",
